@@ -1,0 +1,238 @@
+html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 24px;
+    color:#555;
+    background: #fff;
+    height: 100%;
+}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {
+    list-style: none;
+}
+input,button {
+    font-family: "Microsoft YaHei";
+}
+a {
+    color:#555;
+    text-decoration: none;
+}
+a:hover {
+    color:#f30;
+    text-decoration: none;
+}
+.clearfloat:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.container {
+    min-width:1200px;
+    margin: 0 auto;
+}
+.main{
+    min-width:1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    height: calc(100% - 50px);
+}
+/*header*/
+.header {
+    overflow: hidden;
+}
+.menus_icon{
+    width: 50px;
+    height: 50px;
+    background: #ec6c32 url(../images/menus_ljp.png) no-repeat center center;
+    background-size: 70% 60%;
+    float: left;
+}
+
+.logo {
+    float: left;
+    margin-left: 20px;
+    margin-right: 60px;
+    width: 145px;
+    height: 41px;
+    background: url(../images/logo_ljp.png) no-repeat 0 center;
+}
+.logo>a {
+    display: block;
+    height: 100%;
+}
+
+
+/*navbar*/
+.navbar {
+    height: 50px;
+    background: #282b33;
+}
+.nav {
+    float: left;
+}
+.nav ul li {
+    float: left;
+}
+.nav ul li a {
+    display: block;
+    padding: 0 24px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 15px;
+}
+.nav ul li a:hover {
+    color: #ec6c32;
+}
+.nav ul li.active a {
+    color: #ec6c32;
+}
+.nav_user {
+    float: right;
+    position: relative;
+}
+.nav_user>p {
+    width: 140px;
+    text-align: center;
+    color:#fff;
+    line-height: 50px;
+    font-size: 15px;
+}
+.email_icon{
+    background: url(../images/email_ljp.png) no-repeat 0 0;
+}
+.nav_user>p>a {
+    color: #fff;
+}
+.nav_user>p>a:hover {
+    color: #ffff99;
+}
+.nav_user>a {
+    display: block;
+    font-size: 15px;
+    color:#fff;
+    line-height: 40px;
+    background: #77c558;
+    padding: 0 14px 0 12px;
+}
+.nav_user>a:hover {
+    background: #82cb64;
+}
+
+.nav_user:hover .user_dropdown{
+  display: block;
+}
+.nav_user:hover .icon-triangle {
+    transform: rotate(180deg);
+}
+.user_dropdown {
+    position: absolute;
+    top:40px;
+    right:0;
+    background: #fff;
+    width: 280px;
+    font-size: 13px;
+    box-shadow: 2px 2px 3px #999;
+    display: none;
+    z-index: 900;
+}
+.user_dropdown>p {
+    padding: 16px 18px;
+}
+.user_dropdown>p>span {
+    color: #f60;
+}
+.user_dropdown .userlink_1 {
+    padding: 0 12px 16px;
+}
+.user_dropdown .userlink_1>a {
+    float: left;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    background: #57bc4c;
+}
+.user_dropdown .userlink_1>a:last-child {
+    float: right;
+}
+.user_dropdown .userlink_1>a:hover {
+    background: #4aaf3f;
+}
+
+.left_lists, .right_content{
+    float: left;
+    
+}
+.left_lists{
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #bab8b8;
+}
+.left_lists > ul p{
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 20px;
+    background: url(../images/箭头.png) no-repeat 235px center;
+    box-shadow: 0 1px 1px #e6e6e6;
+}
+.left_lists>ul>li li{
+    padding: 10px 0;
+    padding-left: 50px;
+    width: 220px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+    cursor: pointer;
+}
+.left_lists>ul>li li:hover{
+    background-color: #f2f5fc;
+}
+.left_lists>ul>li li.active{
+    background-color: #f2f5fc;
+}
+.left_lists li span {
+     background: url(../images/util.png) no-repeat left center; 
+    padding-left: 30px;
+    }
+    .left_lists li a{
+        padding-left: 25px;
+    }
+.icon_01{
+    background: url(../images/订单管理.png) no-repeat left center; 
+}
+.icon_02{
+    background: url(../images/收款记录.png) no-repeat left center; 
+}
+.icon_03{
+    background: url(../images/交易流水线.png) no-repeat left center; 
+}
+.icon_04{
+    background: url(../images/发票管理.png) no-repeat left center; 
+}
+.icon_05{
+    background: url(../images/工单信息.png) no-repeat left center; 
+}
+.icon_06{
+    background: url(../images/商品管理.png) no-repeat left center; 
+}
+.icon_07{
+    background: url(../images/配置\ \(2\).png) no-repeat left center; 
+}
+.icon_08{
+    background: url(../images/icon_price.png) no-repeat left center; 
+}
+.icon_09{
+    background: url(../images/员工.png) no-repeat left center; 
+}
+.right_content{
+    padding: 25px;
+}
