@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racent锐成信息</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        #tab {
+            overflow: hidden;
+        }
+
+        #tab li {
+            margin-right: 10px;
+            list-style: none;
+            float: left;
+            width: 100px;
+            text-align: center;
+            background-color: #e5f0ff;
+            border: 1px solid #e0e0e0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #tab li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+        }
+
+        #content {
+            position: relative;
+        }
+
+        #content>div {
+            position: absolute;
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: #fff;
+        }
+
+        #content #content1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div id="header_box"></div>
+    <!-- 主体 -->
+    <div class="main">
+        <div class='left_lists'></div>
+        <div class="right_content">
+            <ul id="tab">
+                <li><a href="#content1">所有订单</a></li>
+                <li><a href="#content2">已付款订单</a></li>
+                <li><a href="#content3">退款订单</a></li>
+                <li><a href="#content4">未付款订单</a></li>
+                <li><a href="#content5">新订单</a></li>
+            </ul>
+            <div id="content">
+                <div id="content1">
+                    最新电影推荐： <br>
+                    《速度与激情》<br>
+                    《超能陆战队》
+                </div>
+                <div id="content2">
+                    火爆娱乐：<br>
+                    《跑男》<br>
+                    《中国好声音》
+                </div>
+                <div id="content3">
+                    热门电视剧： <br>
+                    《三生三世》 <br>
+                    《我们的少年时代》
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
