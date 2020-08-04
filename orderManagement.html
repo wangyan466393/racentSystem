@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Racent锐成信息</title>
+    <title>订单管理</title>
     <link rel="stylesheet" href="css/common.css">
     <style>
         #tab {
@@ -19,6 +19,7 @@
             text-align: center;
             background-color: #e5f0ff;
             border: 1px solid #e0e0e0;
+            border-bottom: none;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }
@@ -28,25 +29,93 @@
             width: 100%;
             height: 100%;
             text-decoration: none;
-            color: white;
             line-height: 40px;
+            font-weight: 700;
+        }
+
+        #tab li.active {
+            background-color: #fff;
+            border-bottom: none;
         }
 
         #content {
             position: relative;
+            height: calc(100% - 50px);
         }
 
         #content>div {
             position: absolute;
-            padding: 30px;
+            padding: 20px;
             width: 100%;
-            height: 100%;
+            height: calc(100% - 50px);
             display: none;
             background-color: #fff;
+            box-sizing: border-box;
         }
 
-        #content #content1 {
+        #content #order_all {
             display: block;
+        }
+
+        #content table {
+            width: 100%;
+            text-align: center;
+        }
+
+        #content table,
+        td {
+            border: 1px solid #e6e6e6;
+            border-collapse: collapse;
+        }
+
+        #content table thead tr {
+            background-color: #e5f0ff;
+        }
+
+        #content table th {
+            padding: 5px 0;
+        }
+
+        #content table td:first-child {
+            color: #ec6c32;
+        }
+
+        #content table a {
+            color: #5d96e3;
+        }
+
+        .order_search {
+            padding: 20px 0;
+            margin-bottom: 20px;
+            background-color: #f6f6f6;
+            border-radius: 7px;
+        }
+
+        .order_search span {
+            margin-left: 20px;
+        }
+
+        .order_search span input {
+            width: 200px;
+            height: 26px;
+            border: none;
+            border: 1px solid #d9d9d9;
+            border-radius: 7px;
+            outline: none;
+            box-shadow: 0 0 2px #ccc;
+        }
+
+        .order_search button {
+            padding: 5px 20px;
+            color: #fff;
+            border: none;
+            background-color: #ec6c32;
+            border-radius: 7px;
+            outline: none;
+            cursor: pointer;
+        }
+        .order_search button:hover{
+            background-color: #f58d5d;
         }
     </style>
 </head>
@@ -59,26 +128,67 @@
         <div class='left_lists'></div>
         <div class="right_content">
             <ul id="tab">
-                <li><a href="#content1">所有订单</a></li>
-                <li><a href="#content2">已付款订单</a></li>
-                <li><a href="#content3">退款订单</a></li>
-                <li><a href="#content4">未付款订单</a></li>
-                <li><a href="#content5">新订单</a></li>
+                <li class="active"><a href="#order_all">所有订单</a></li>
+                <li><a href="#order_paid">已付款订单</a></li>
+                <li><a href="#order_refund">退款订单</a></li>
+                <li><a href="#order_notPaid">未付款订单</a></li>
+                <li><a href="#order_new">新订单</a></li>
             </ul>
             <div id="content">
-                <div id="content1">
-                    最新电影推荐： <br>
-                    《速度与激情》<br>
-                    《超能陆战队》
+                <div id="order_all">
+                    <div class="order_search">
+                        <span>
+                            用户名&nbsp;<input type="text">
+                        </span>
+                        <span>
+                            订单号&nbsp;<input type="text">
+                        </span>
+                        <span>
+                            付款日期&nbsp;<input type="text">
+                        </span>
+                        <span>
+                            <button type="button">搜索</button>
+                        </span>
+                    </div>
+                    <div>
+                        <table id="order_dataLists">
+                            <thead>
+                            <tr>
+                                <th>用户名</th>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>下单日期</th>
+                                <th>付款方式</th>
+                                <th>订单类型</th>
+                                <th>订单状态</th>
+                                <th>订单价格</th>
+                                <th>订单操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div id="content2">
+                <div id="order_paid">
                     火爆娱乐：<br>
                     《跑男》<br>
                     《中国好声音》
                 </div>
-                <div id="content3">
+                <div id="order_refund">
                     热门电视剧： <br>
                     《三生三世》 <br>
+                    《我们的少年时代》
+                </div>
+                <div id="order_notPaid">
+                    热门电视剧： <br>
+                    《三生三世》www <br>
+                    《我们的少年时代》
+                </div>
+                <div id="order_new">
+                    热门电视剧： <br>
+                    《三生三世ffff》 <br>
                     《我们的少年时代》
                 </div>
             </div>
@@ -86,6 +196,67 @@
     </div>
     <script src="js/jquery-1.11.3.js"></script>
     <script src='js/main.js'></script>
+    <script>
+
+        //需求：单击标题，让对于的内容显示
+        //tab切换
+        var as = document.querySelectorAll("#tab li a");
+        var lis = document.querySelectorAll("#tab li");
+        for (var i = 0; i < as.length; i++) {
+            //绑定事件
+            as[i].onclick = function () {
+                console.log(this)
+                //查找要修改的元素
+                //当触发a的时候 ，让所有的 div内容隐藏
+                var divs = document.querySelectorAll("#content>div");
+                for (var j = 0; j < divs.length; j++) {
+                    divs[j].style.display = "none";
+                    lis[j].className = ""
+                }
+                //进行修改
+                //让当前a对应的 div显示
+                var i = this.href.lastIndexOf("#");  //查找的就是#出现的位置；this.href  完整的路径地址；
+                var id = this.href.substring(i);   // 截取#到结尾的内容
+                console.log(document.querySelector(id).parentNode);  //#content1  #content2  #content3
+                document.querySelector(id).style.display = "block";
+                this.parentElement.className = "active";
+            }
+        }
+
+        var json = [
+            { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },   //json[0]
+            { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+            { "name": "ljp2", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+            { "name": "ljp3", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+            { "name": "ljp4", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+        ];
+
+        //获取所有订单表数据
+        getTableData()
+        function getTableData() {
+            var tableInfo = "";
+            var tbody = document.getElementsByTagName("tbody")[0];
+            for (var i = 0; i < json.length; i++) {    //遍历Table的所有Row
+                tableInfo += "<tr>"
+                    //遍历Row中的每一列
+                    //获取Table中单元格的内容
+                    + " <td>"+json[i].name+"</td> "
+                    + "<td>20200803xcnjj63cm</td>"
+                    + "     <td>Sectigo EV代码签名</td>"
+                    + "     <td>2020-08-03 18:35:00</td>"
+                    + "       <td>零钱支付</td>"
+                    + "       <td>新</td>"
+                    + "       <td>草稿</td>"
+                    + "       <td>￥1299.60</td>"
+                    + "       <td><a href='#'>详情</a></td>  ";
+
+                + "</tr>";
+            }
+            tbody.innerHTML = tableInfo  ;
+        }
+
+
+    </script>
 </body>
 
 </html>
