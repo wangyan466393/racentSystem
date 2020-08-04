@@ -6,6 +6,7 @@
     <title>Racent锐成信息</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/tab.css">
+
 </head>
 <body>
 <!--header-->
@@ -18,7 +19,14 @@
             <div class="container">
                 <div class="nav">
                     <ul>
-                        <li class="active"><a href="#">销售管理</a></li>
+                        <li class="active">
+                            <a href="#">销售管理</a>
+                            <ul class="select_menus">
+                                <li><a href="#">客户资料</a></li>
+                                <li data-id="orderManagement"><a href="#">订单管理</a></li>
+                                <li data-id="subscriptionManagement"><a href="#">订阅管理</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">财务管理</a></li>
                         <li><a href="#">客服支持</a></li>
                         <li><a href="#">商品管理</a></li>
@@ -55,11 +63,11 @@
       </ul>
     </div>
     <div class="right_content">
-        dsdsds
     </div>
 </div>
+
 <script src="js/jquery-1.11.3.js"></script>
 <script src='js/tab.js'></script>
-<script src='js/main.js'></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -48,7 +48,7 @@ a:hover {
 }
 /*header*/
 .header {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .menus_icon{
     width: 50px;
@@ -80,21 +80,43 @@ a:hover {
 .nav {
     float: left;
 }
-.nav ul li {
+.nav >ul >li {
     float: left;
 }
-.nav ul li a {
+.nav >ul >li> a {
     display: block;
     padding: 0 24px;
     line-height: 50px;
     color: #fff;
     font-size: 15px;
 }
-.nav ul li a:hover {
+.nav > ul li a:hover {
     color: #ec6c32;
 }
-.nav ul li.active a {
+.nav >ul >li.active > a {
     color: #ec6c32;
+}
+.select_menus{
+    position: absolute;
+    background-color: #282b33;
+    z-index: 200;
+    border-top: 1px solid #e95513;
+    opacity: 0.9;
+    width: 150px;
+    text-align: center;
+    display: none;
+}
+.select_menus li{
+    border-bottom: 1px solid ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.select_menus li  a{
+    color: #fff;
+    
+}
+.nav > ul li:hover ul{
+    display: block;
 }
 .nav_user {
     float: right;

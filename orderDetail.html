@@ -1,202 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<div>
+    <p>
+        销售管理 &gt; <span > 订单管理</span> &gt; <span class="detail_title">订单详情</span>
+    </p>
+    <div class="detail_content">
+        <ul>
+            <li>
+                <span>
+                    <label> 订单号</label><input type="text" disabled>
+                </span>
+                <span>
+                    <label> 客户名</label><input type="text" disabled>
+                </span>
+                <span>
+                    <label> 付款方式</label><input type="text" disabled>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <label>金额</label><input type="text" disabled>
+                    <a href="#">修改</a>
+                </span>
+                <span>
+                    <label>证书名称</label> <input type="text" disabled>
+                </span>
+                <span>
+                    <label>时间</label><input type="text" disabled>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <label>推介</label><input type="text" disabled>
+                    <a href="#">修改</a>
+                </span>
+                <span>
+                    <label>优惠码</label><input type="text" disabled>
+                </span>
+                <span>
+                    <label>年限</label><input type="text" disabled>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <label>状态</label><input type="text" disabled>
+                    <a href="#">修改</a>
+                </span>
+                <span>
+                    <label>备注</label><input type="text" disabled>
+                </span>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>订单管理</title>
-    <link rel="stylesheet" href="css/common.css">
-    <style>
-        #tab {
-            overflow: hidden;
-        }
-
-        #tab li {
-            margin-right: 10px;
-            list-style: none;
-            float: left;
-            width: 100px;
-            text-align: center;
-            background-color: #e5f0ff;
-            border: 1px solid #e0e0e0;
-            border-bottom: none;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-
-        #tab li a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            line-height: 40px;
-            font-weight: 700;
-        }
-
-        #tab li.active {
-            background-color: #fff;
-            border-bottom: none;
-        }
-
-        #content {
-            position: relative;
-            height: calc(100% - 50px);
-        }
-
-        #content>div {
-            position: absolute;
-            padding: 20px;
-            width: 100%;
-            height: calc(100% - 50px);
-            display: none;
-            background-color: #fff;
-            box-sizing: border-box;
-        }
-
-        #content #order_all {
-            display: block;
-        }
-
-        #content table {
-            width: 100%;
-            text-align: center;
-        }
-
-        #content table,
-        td {
-            border: 1px solid #e6e6e6;
-            border-collapse: collapse;
-        }
-
-        #content table thead tr {
-            background-color: #e5f0ff;
-        }
-
-        #content table th {
-            padding: 5px 0;
-        }
-
-        #content table td:first-child {
-            color: #ec6c32;
-        }
-
-        #content table a {
-            color: #5d96e3;
-        }
-
-        .order_search {
-            padding: 20px 0;
-            margin-bottom: 20px;
-            background-color: #f6f6f6;
-            border-radius: 7px;
-        }
-
-        .order_search span {
-            margin-left: 20px;
-        }
-
-        .order_search span input {
-            width: 200px;
-            height: 26px;
-            border: none;
-            border: 1px solid #d9d9d9;
-            border-radius: 7px;
-            outline: none;
-            box-shadow: 0 0 2px #ccc;
-        }
-
-        .order_search button {
-            padding: 5px 20px;
-            color: #fff;
-            border: none;
-            background-color: #ec6c32;
-            border-radius: 7px;
-            outline: none;
-            cursor: pointer;
-        }
-        .order_search button:hover{
-            background-color: #f58d5d;
-        }
-    </style>
-</head>
-
-<body>
-    <!--header-->
-    <div id="header_box"></div>
-    <!-- 主体 -->
-    <div class="main">
-        <div class='left_lists'></div>
-        <div class="right_content">
-            <ul id="tab">
-                <li class="active"><a href="#order_all">所有订单</a></li>
-                <li><a href="#order_paid">已付款订单</a></li>
-                <li><a href="#order_refund">退款订单</a></li>
-                <li><a href="#order_notPaid">未付款订单</a></li>
-                <li><a href="#order_new">新订单</a></li>
-            </ul>
-            <div id="content">
-                <div id="order_all">
-                    <div class="order_search">
-                        <span>
-                            用户名&nbsp;<input type="text">
-                        </span>
-                        <span>
-                            订单号&nbsp;<input type="text">
-                        </span>
-                        <span>
-                            付款日期&nbsp;<input type="text">
-                        </span>
-                        <span>
-                            <button type="button">搜索</button>
-                        </span>
-                    </div>
-                    <div>
-                        <table id="order_dataLists">
-                            <thead>
-                            <tr>
-                                <th>用户名</th>
-                                <th>订单编号</th>
-                                <th>产品名称</th>
-                                <th>下单日期</th>
-                                <th>付款方式</th>
-                                <th>订单类型</th>
-                                <th>订单状态</th>
-                                <th>订单价格</th>
-                                <th>订单操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="order_paid">
-                    火爆娱乐：<br>
-                    《跑男》<br>
-                    《中国好声音》
-                </div>
-                <div id="order_refund">
-                    热门电视剧： <br>
-                    《三生三世》 <br>
-                    《我们的少年时代》
-                </div>
-                <div id="order_notPaid">
-                    热门电视剧： <br>
-                    《三生三世》www <br>
-                    《我们的少年时代》
-                </div>
-                <div id="order_new">
-                    热门电视剧： <br>
-                    《三生三世ffff》 <br>
-                    《我们的少年时代》
-                </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src='js/main.js'></script>
-    
-</body>
-
-</html>
+    <div class="handle_order">
+        <p>
+            总计：￥<span>3300.00</span>
+        </p>
+        <p>
+            <button type="button" class="edit_btn">修改订单</button>
+            <button type="button" class="del_btn">删除订单</button>
+        </p>
+    </div>
+</div>
