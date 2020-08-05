@@ -31,15 +31,14 @@
 }
 
 #content {
-    position: relative;
-    height: calc(100% - 50px);
+    /* position: relative; */
+    height: 100%;
 }
 
 #content>div {
-    position: absolute;
+    /* position: absolute; */
     padding: 20px;
     width: 100%;
-    height: calc(100% - 50px);
     display: none;
     background-color: #fff;
     box-sizing: border-box;
@@ -60,7 +59,7 @@ td {
     border-collapse: collapse;
 }
 
-#content table thead tr {
+#content .table_box table thead tr {
     background-color: #e5f0ff;
 }
 
@@ -68,7 +67,7 @@ td {
     padding: 5px 0;
 }
 
-#content table td:first-child {
+#content .table_box table td:first-child {
     color: #ec6c32;
 }
 
@@ -144,6 +143,7 @@ td {
 .detail_content input{
     width: 220px;
     height: 30px;
+    outline: none;
 }
 .detail_content a{
     position: absolute;
@@ -185,4 +185,106 @@ td {
     margin-right: 50px;
     margin-left: 10px;
     background-color: #fff;
+}
+
+/* 产品服务 */
+#customer_info .product_serve{
+    margin-bottom: 20px;
+}
+#customer_info .product_serve h2{
+    position: relative;
+    padding: 10px 20px;
+    background-color: #e5f0ff;
+}
+#customer_info .product_serve h2 button{
+   float: right;
+   padding: 5px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    border-radius: 17px;
+    outline: none;
+    cursor: pointer;
+}
+#customer_info .product_serve .product_box{
+    padding: 15px 15px 0px 15px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+}
+#customer_info .product_serve .product_box table, .product_box table td{
+    border: none;
+}
+#customer_info .product_serve .product_box thead tr{
+    background-color: #f2f5fc;
+}
+#customer_info .product_serve .product_box tbody tr{
+    border-bottom: 1px solid #e6e6e6;
+}
+#customer_info .product_serve .product_box tbody tr:hover{
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+#customer_info .product_serve .product_box tbody tr:last-child{
+    border: none;
+}
+/* 用户信息 */
+.user_info{
+    display: flex;
+    margin-bottom: 20px;
+}
+.user_info>div{
+    float: left;
+    width: 32%;
+    margin-right: 19px;
+}
+#customer_info .user_info table{
+    text-align: left;
+}
+#customer_info .user_info tr{
+    height: 35px;
+}
+.user_info td{
+    border: none;
+    padding-left:20px ;
+}
+.user_info caption{
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #e5f0ff;
+}
+.user_info tr:nth-child(2n){
+    background-color: #f6f6f6;
+}
+.user_info a{
+    padding-left: 25px;
+}
+.shopp a{
+    background: url(../images/shopp_cart_01.png) no-repeat left center;
+}
+
+.renew a{
+    background: url(../images/renew_01.png) no-repeat left center;
+}
+.remaining a{
+    background: url(../images/remaining_01.png) no-repeat left center;
+}
+.pay a{
+    background: url(../images/pay_01.png) no-repeat left center;
+}
+.shopp a:hover{
+    background: url(../images/shopp_cart.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.renew a:hover{
+    background: url(../images/renew_02.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.remaining a:hover{
+    background: url(../images/remaining_02.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.pay a:hover{
+    background: url(../images/pay_02.png) no-repeat left center;
+    color:#ec6c32 !important;
 }
