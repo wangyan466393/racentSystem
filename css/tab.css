@@ -1,3 +1,4 @@
+/* tab切换样式 */
 #tab {
     overflow: hidden;
 }
@@ -73,6 +74,7 @@ td {
 
 #content table a {
     color: #5d96e3;
+    cursor: pointer;
 }
 
 .order_search {
@@ -108,7 +110,9 @@ td {
 .order_search button:hover{
     background-color: #f58d5d;
 }
-
+#subscription_dataLists tbody td:last-child{
+    padding-top: 6px;
+}
 
 
 /* 订单详情 */

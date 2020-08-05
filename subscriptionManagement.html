@@ -57,4 +57,34 @@
     </div>
 </div>
 
-<!-- <script src="js/main.js"></script> -->
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    //获取订阅管理-所有订单
+    var jsonSub = [
+        { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},   //json[0]
+        { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},
+        { "name": "ljp2", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年",  "order_price": "1229.60" ,"product_status":"申请中"},
+        { "name": "ljp3", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60","product_status":"申请中" },
+        { "name": "ljp4", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},
+    ];
+    getSubscriptionData()
+    function getSubscriptionData() {
+        var tableInfo = ""
+        for (var i = 0; i < jsonSub.length; i++) {    //遍历Table的所有Row
+            tableInfo += "<tr>"
+                //遍历Row中的每一列
+                //获取Table中单元格的内容
+                + " <td>" + jsonSub[i].name + "</td> "
+                + "<td>" + jsonSub[i].order_num + "</td>"
+                + "<td>" + jsonSub[i].product_name + "</td>"
+                + "<td>2020-08-03 18:35:00</td>"
+                + "<td>" + jsonSub[i].renewal_cycle + "</td>"
+                + "<td>" + jsonSub[i].order_price + "</td>"
+                + "<td>" + jsonSub[i].product_status + "</td>"
+                + "<td><img src='images/delete.png'></td>  ";
+
+            tableInfo += "</tr>";
+        }
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+</script>
