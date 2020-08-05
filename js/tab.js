@@ -1,18 +1,15 @@
 
 $(function () {
-    $(".leftMenus").on("click", "li", function (e) {
-        
+    $(".leftMenus").on("click", "li", function (e) {  
         var sId = $(this).data("id");  //获取data-id的值
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
-        
     });
     $(".nav .select_menus").on("click", "li", function (e) {
         e.preventDefault()
         var sId = $(this).data("id");  //获取data-id的值
         window.location.hash = sId;  //设置锚点
-        loadInner(sId);
-        
+        loadInner(sId);  
     });
     //订单详情
     $(".right_content").on("click", "#order_dataLists a", function (e) {
@@ -47,12 +44,8 @@ $(function () {
         $("#content .order_content").eq(i).css('display', 'block');
         $(this).addClass("active");
     })
-
-
-    
-
-
-
 })
+
+
 
 
