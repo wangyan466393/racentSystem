@@ -1,10 +1,6 @@
-<ul id="tab">
-    <li class="active"><a href="#">所有订单</a></li>
-    <li><a href="#">已付款订单</a></li>
-    <li><a href="#">退款订单</a></li>
-    <li><a href="#">未付款订单</a></li>
-    <li><a href="#">新订单</a></li>
-</ul>
+<div id="content_box">
+    <h2>订单列表</h2>
+
 <div id="content">
     <div id="order_all"  class="order_content">
         <div class="order_search">
@@ -25,6 +21,7 @@
             <table id="order_dataLists" >
                 <thead>
                     <tr>
+                        <th></th>
                         <th>用户名</th>
                         <th>订单编号</th>
                         <th>产品名称</th>
@@ -42,28 +39,8 @@
             </table>
         </div>
     </div>
-    <div id="order_paid" class="order_content">
-        火爆娱乐：<br>
-        《跑男》<br>
-        《中国好声音》
-    </div>
-    <div id="order_refund"  class="order_content">
-        热门电视剧： <br>
-        《三生三世》 <br>
-        《我们的少年时代》
-    </div>
-    <div id="order_notPaid"  class="order_content">
-        热门电视剧： <br>
-        《三生三世》www <br>
-        《我们的少年时代》
-    </div>
-    <div id="order_new"  class="order_content">
-        热门电视剧： <br>
-        《三生三世ffff》 <br>
-        《我们的少年时代》
-    </div>
 </div>
-
+</div>
 <script src="js/jquery-1.11.3.js"></script>
 <script>
     var json = [
@@ -81,6 +58,7 @@
             tableInfo += "<tr>"
                 //遍历Row中的每一列
                 //获取Table中单元格的内容
+                + " <td><input type='checkbox'></td> "
                 + " <td>" + json[i].name + "</td> "
                 + "<td>20200803xcnjj63cm</td>"
                 + "<td>Sectigo EV代码签名</td>"
