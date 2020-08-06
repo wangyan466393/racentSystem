@@ -17,9 +17,13 @@ ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
 ul,ol {
     list-style: none;
 }
-input,button {
+input,button,select {
     font-family: "Microsoft YaHei";
     cursor: pointer;
+    outline: none;
+}
+button:hover{
+    opacity: 0.9;
 }
 a {
     color:#555;
