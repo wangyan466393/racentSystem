@@ -335,3 +335,22 @@ td {
     background: url(../images/pay_02.png) no-repeat left center;
     color:#ec6c32 !important;
 }
+
+/* 财务管理  - 发票列表 */
+.finance-search>select{
+    width: 173px;
+	height: 40px;
+	background-color: #ffffff;
+    border: solid 1px #e5e5e5;
+    font-size: 14px;
+    color: #999;
+    text-indent: 8px;
+}
+.finance-search>button{
+    width: 106px;
+	height: 40px;
+    background-color: #ec6c32;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+}
