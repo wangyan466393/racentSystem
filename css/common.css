@@ -7,7 +7,7 @@ body {
     font-size: 12px;
     line-height: 24px;
     color:#555;
-    background: #fff;
+    /* background: #f6f6f6; */
     height: 100%;
 }
 ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,button {
@@ -40,11 +40,12 @@ a:hover {
     margin: 0 auto;
 }
 .main{
+    display: flex;
     min-width:1200px;
     margin: 0 auto;
-    overflow: hidden;
     background-color: #f6f6f6;
-    /* height: calc(100% - 50px); */
+    min-height: 100%;
+    overflow: hidden;
 }
 /*header*/
 .header {
@@ -197,14 +198,14 @@ a:hover {
     
 }
 .left_lists{
-    height: 100%;
+    height: initial;
     background-color: #fff;
     box-shadow: 5px 5px 5px #bab8b8;
 }
 .left_lists > ul p{
     border-bottom: 1px solid #e6e6e6;
     padding: 10px 20px;
-    background: url(../images/箭头.png) no-repeat 235px center;
+    background: url(../images/icon_arrows.png) no-repeat 235px center;
     box-shadow: 0 1px 1px #e6e6e6;
 }
 .left_lists>ul>li li{
@@ -229,31 +230,31 @@ a:hover {
         padding-left: 25px;
     }
 .icon_01{
-    background: url(../images/订单管理.png) no-repeat left center; 
+    background: url(../images/icon_order.png) no-repeat left center; 
 }
 .icon_02{
-    background: url(../images/收款记录.png) no-repeat left center; 
+    background: url(../images/icon_proceeds.png) no-repeat left center; 
 }
 .icon_03{
-    background: url(../images/交易流水线.png) no-repeat left center; 
+    background: url(../images/icon_operatin.png) no-repeat left center; 
 }
 .icon_04{
-    background: url(../images/发票管理.png) no-repeat left center; 
+    background: url(../images/icon_invoice.png) no-repeat left center; 
 }
 .icon_05{
-    background: url(../images/工单信息.png) no-repeat left center; 
+    background: url(../images/icon_workorder.png) no-repeat left center; 
 }
 .icon_06{
-    background: url(../images/商品管理.png) no-repeat left center; 
+    background: url(../images/icon_goods.png) no-repeat left center; 
 }
 .icon_07{
-    background: url(../images/配置\ \(2\).png) no-repeat left center; 
+    background: url(../images/icon_goodsconfig.png) no-repeat left center; 
 }
 .icon_08{
     background: url(../images/icon_price.png) no-repeat left center; 
 }
 .icon_09{
-    background: url(../images/员工.png) no-repeat left center; 
+    background: url(../images/icon_user.png) no-repeat left center; 
 }
 .right_content{
     padding: 25px 0 25px 25px;

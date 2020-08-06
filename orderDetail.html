@@ -1,6 +1,6 @@
 <div>
     <p>
-        销售管理 &gt; <span > 订单管理</span> &gt; <span class="detail_title">订单详情</span>
+        销售管理 &gt; <span> 订单管理</span> &gt; <span class="detail_title">订单详情</span>
     </p>
     <div class="detail_content">
         <ul>
@@ -61,3 +61,11 @@
         </p>
     </div>
 </div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".detail_content li a").click(function(){
+        $(this).prev().removeAttr("disabled");
+        $(this).prev().focus()
+    })
+</script>
