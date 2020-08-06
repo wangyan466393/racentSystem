@@ -36,7 +36,7 @@ $(function () {
     var sId = window.location.hash;
     loadInner(sId);
 
-    //tab切换
+    //tab切换右侧
     $('.right_content').on('click', '#tab li', function (e) {
         var i = $(this).index()
         e.preventDefault()
@@ -44,6 +44,11 @@ $(function () {
         $(".order_content").css('display', 'none');
         $("#content .order_content").eq(i).css('display', 'block');
         $(this).addClass("active");
+    })
+    
+    // tab切换导航
+    $('.nav').on('click','li',function(){
+        $(this).addClass('active').siblings().removeClass('active');
     })
 })
 
