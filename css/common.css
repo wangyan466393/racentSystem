@@ -19,6 +19,7 @@ ul,ol {
 }
 input,button {
     font-family: "Microsoft YaHei";
+    cursor: pointer;
 }
 a {
     color:#555;

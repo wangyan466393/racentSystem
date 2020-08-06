@@ -1,70 +1,56 @@
-<div>
-    <p>
-        销售管理 &gt; <span> 订单管理</span> &gt; <span class="detail_title">订单详情</span>
-    </p>
+<div id="content_box">
+    <h2>订单详情</h2>
     <div class="detail_content">
-        <ul>
-            <li>
-                <span>
-                    <label> 订单号</label><input type="text" disabled>
-                </span>
-                <span>
-                    <label> 客户名</label><input type="text" disabled>
-                </span>
-                <span>
-                    <label> 付款方式</label><input type="text" disabled>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <label>金额</label><input type="text" disabled>
-                    <a href="#">修改</a>
-                </span>
-                <span>
-                    <label>证书名称</label> <input type="text" disabled>
-                </span>
-                <span>
-                    <label>时间</label><input type="text" disabled>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <label>推介</label><input type="text" disabled>
-                    <a href="#">修改</a>
-                </span>
-                <span>
-                    <label>优惠码</label><input type="text" disabled>
-                </span>
-                <span>
-                    <label>年限</label><input type="text" disabled>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <label>状态</label><input type="text" disabled>
-                    <a href="#">修改</a>
-                </span>
-                <span>
-                    <label>备注</label><input type="text" disabled>
-                </span>
-
-            </li>
-        </ul>
+        <table>
+            <tr>
+                <td>
+                    订单号
+                </td>
+                <td><input type="text" disabled></td>
+                <td>客户名</td>
+                <td><input type="text" disabled></td>
+                <td>付款方式</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>金额</td>
+                <td><input type="text" disabled><a href="#">修改</a></td>
+                <td>证书名称</td>
+                <td><input type="text" disabled></td>
+                <td>时间</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>推介</td>
+                <td><input type="text" disabled><a href="#">修改</a></td>
+                <td>优惠码</td>
+                <td><input type="text" disabled></td>
+                <td>年限</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>状态</td>
+                <td><input type="text" disabled><a href="#">修改</a></td>
+                <td>备注</td>
+                <td colspan="3"><input type="text" style="width: 100%;" disabled></td>
+            </tr>
+        </table>
     </div>
-    <div class="handle_order">
-        <p>
-            总计：￥<span>3300.00</span>
-        </p>
-        <p>
-            <button type="button" class="edit_btn">修改订单</button>
-            <button type="button" class="del_btn">删除订单</button>
-        </p>
-    </div>
+    
+</div>
+<div class="handle_order">
+    <p>
+        总计：￥<span>3300.00</span>
+    </p>
+    <p>
+        <button type="button" class="edit_btn">修改订单</button>
+        <button type="button" class="del_btn">删除订单</button>
+    </p>
 </div>
 
 <script src="js/jquery-1.11.3.js"></script>
 <script>
-    $(".detail_content li a").click(function(){
+    $(".detail_content table a").click(function(){
         $(this).prev().removeAttr("disabled");
         $(this).prev().focus()
     })
