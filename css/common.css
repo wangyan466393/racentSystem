@@ -44,7 +44,7 @@ a:hover {
     margin: 0 auto;
     overflow: hidden;
     background-color: #f6f6f6;
-    height: calc(100% - 50px);
+    /* height: calc(100% - 50px); */
 }
 /*header*/
 .header {
