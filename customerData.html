@@ -1,264 +1,423 @@
 <div id="content_box" class="customer_info">
     <h2>用户信息</h2>
-<ul id="tab">
-    <li class="active"><a href="#">信息总览</a></li>
-    <li><a href="#">个人资料</a></li>
-    <li><a href="#">产品/服务</a></li>
-    <li><a href="#">账单</a></li>
-    <li><a href="#">交易记录</a></li>
-</ul>
-<div id="content">
-    <div id="order_all"  class="order_content">
-        <div class="user_info clearfloat">
+    <ul id="tab">
+        <li class="active"><a href="#">信息总览</a></li>
+        <li><a href="#">个人资料</a></li>
+        <li><a href="#">产品/服务</a></li>
+        <li><a href="#">账单</a></li>
+        <li><a href="#">交易记录</a></li>
+        <li><a href="#">修改等级</a></li>
+    </ul>
+    <div id="content">
+        <!-- 信息总览 -->
+        <div id="order_all" class="order_content">
+            <div class="user_info clearfloat">
+                <div>
+                    <table>
+                        <caption>用户信息</caption>
+                        <tbody>
+                            <tr>
+                                <td>用户名</td>
+                                <td>lijp</td>
+                            </tr>
+                            <tr>
+                                <td>姓名</td>
+                                <td>李建鹏</td>
+                            </tr>
+                            <tr>
+                                <td>电子邮箱</td>
+                                <td>516805886@qq.com</td>
+                            </tr>
+                            <tr>
+                                <td>客户等级</td>
+                                <td>测试等级</td>
+                            </tr>
+                            <tr>
+                                <td>客户经理</td>
+                                <td>li</td>
+                            </tr>
+                            <tr>
+                                <td>电话号码</td>
+                                <td>13628019394</td>
+                            </tr>
+                            <tr>
+                                <td>地址</td>
+                                <td>成都市青羊区东方广场B座</td>
+                            </tr>
+                            <tr>
+                                <td>透支金额</td>
+                                <td>10万元</td>
+                            </tr>
+                            <tr>
+                                <td>币种</td>
+                                <td>RMB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table>
+                        <caption>财务/账单</caption>
+                        <tbody>
+                            <tr>
+                                <td>已支付</td>
+                                <td>2笔（20000.00）</td>
+                            </tr>
+                            <tr>
+                                <td>未支付</td>
+                                <td>2笔（20000.00）</td>
+                            </tr>
+                            <tr>
+                                <td>已取消</td>
+                                <td>0笔（0.00）</td>
+                            </tr>
+                            <tr>
+                                <td>已退款</td>
+                                <td>0笔（0.00）</td>
+                            </tr>
+                            <tr>
+                                <td>账户余额</td>
+                                <td>¥10000.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="shopp">
+                                        <a href="#">购买产品</a>
+                                    </p>
+                                </td>
+                                <td rowspan="4" valign="top">
+                                    <p class="pay">
+                                        <a href="#">充值金额</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="remaining">
+                                        <a href="#">余额管理</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="renew">
+                                        <a href="#">生成续费账单</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-right: 0;">
+                    <table>
+                        <caption>其它信息</caption>
+                        <tbody>
+                            <tr>
+                                <td>状态</td>
+                                <td>已激活</td>
+                            </tr>
+                            <tr>
+                                <td>用户组</td>
+                                <td>李建鹏</td>
+                            </tr>
+                            <tr>
+                                <td>开通时间</td>
+                                <td>516805886@qq.com</td>
+                            </tr>
+                            <tr>
+                                <td>注册时长</td>
+                                <td>测试等级</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5">登录记录</td>
+                                <td>Date: 2020-07-20 22:02IP Address: 112.43.154.11Host: 112.43.15</td>
+                            </tr>
+
+                            <tr>
+                                <td>Date: 2020-07-20 22:02IP Address: 112.43.154.11Host: 112.43.15</td>
+                            </tr>
+
+                            <tr>
+                                <td>Date: 2020-07-20 22:02IP Address: 112.43.154.11Host: 112.43.15</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="product_serve new_product">
+                <h2>新购产品
+                    <button type="button">新购</button>
+                </h2>
+                <div class="product_box">
+                    <table id="newproduct_dataLists">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>金额</th>
+                                <th>付款时间</th>
+                                <th>开通时间</th>
+                                <th>到期时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="product_serve due_product">
+                <h2>到期产品
+                    <button type="button">新购</button>
+                </h2>
+                <div class="product_box">
+                    <table id="dueproduct_dataLists">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>付款时间</th>
+                                <th>开通时间</th>
+                                <th>到期时间</th>
+                                <th>剩余时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 个人资料 -->
+        <div class="order_content personal_box">
+            <div style="display: flex;justify-content: space-between;padding-bottom: 30px;">
+                <div class="personal_data">
+                    <table>
+                        <tr>
+                            <td>用户名：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>姓名：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>公司：</td>
+                            <td><input type="text">(可选填)</td>
+                        </tr>
+                        <tr>
+                            <td>电子邮件：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>密码：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>确认密码：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="personal_data">
+                    <table>
+                        <tr>
+                            <td>地址：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>身份证：</td>
+                            <td><input type="text">(可选填)</td>
+                        </tr>
+                        <tr>
+                            <td>城市：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>邮编：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>国家：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>手机号码：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="personal_savebtn">保存更改</button>
+            <button type="button" class="personal_canelbtn">取消更改</button>
+        </div>
+        <!-- 产品服务 -->
+        <div class="order_content">
+            <div class="product_serve new_product">
+                <h2>新购产品
+                    <button type="button">新购</button>
+                </h2>
+                <div class="product_box">
+                    <table id="newproduct_dataLists">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>金额</th>
+                                <th>付款时间</th>
+                                <th>开通时间</th>
+                                <th>到期时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="product_serve due_product">
+                <h2>到期产品
+                    <button type="button">新购</button>
+                </h2>
+                <div class="product_box">
+                    <table id="dueproduct_dataLists">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>付款时间</th>
+                                <th>开通时间</th>
+                                <th>到期时间</th>
+                                <th>剩余时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 账单 -->
+        <div class="order_content bill">
             <div>
-                <table>
-                    <caption>用户信息</caption>
-                    <tbody>
-                        <tr>
-                            <td>用户名</td>
-                            <td>lijp</td>
-                        </tr>
-                        <tr>
-                            <td>姓名</td>
-                            <td>李建鹏</td>
-                        </tr>
-                        <tr>
-                            <td>电子邮箱</td>
-                            <td>516805886@qq.com</td>
-                        </tr>
-                        <tr>
-                            <td>客户等级</td>
-                            <td>测试等级</td>
-                        </tr>
-                        <tr>
-                            <td>客户经理</td>
-                            <td>li</td>
-                        </tr>
-                        <tr>
-                            <td>电话号码</td>
-                            <td>13628019394</td>
-                        </tr>
-                        <tr>
-                            <td>地址</td>
-                            <td>成都市青羊区东方广场B座</td>
-                        </tr>
-                        <tr>
-                            <td>透支金额</td>
-                            <td>10万元</td>
-                        </tr>
-                        <tr>
-                            <td>币种</td>
-                            <td>RMB</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-                <table>
-                    <caption>财务/账单</caption>
-                    <tbody>
-                        <tr>
-                            <td>已支付</td>
-                            <td>2笔（20000.00）</td>
-                        </tr>
-                        <tr>
-                            <td>未支付</td>
-                            <td>2笔（20000.00）</td>
-                        </tr>
-                        <tr>
-                            <td>已取消</td>
-                            <td>0笔（0.00）</td>
-                        </tr>
-                        <tr>
-                            <td>已退款</td>
-                            <td>0笔（0.00）</td>
-                        </tr>
-                        <tr>
-                            <td>账户余额</td>
-                            <td>¥10000.00</td>
-                        </tr>
-                        <tr >
-                            <td >
-                               <p class="shopp">
-                                    <a href="#">购买产品</a>   
-                               </p> 
-                            </td>
-                            <td rowspan="4" valign="top">
-                               <p class="pay">
-                                   <a href="#">充值金额</a>
-                               </p> 
-                            </td>
-                        </tr>
-                        <tr >
-                            <td >
-                                <p class="remaining">
-                                   <a href="#">余额管理</a> 
-                                </p>
-                            </td>
-                        </tr>
-                        <tr >
-                            <td >
-                                <p class="renew">
-                                    <a href="#">生成续费账单</a>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr >
-                            <td >
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <div style="margin-right: 0;">
-                <table>
-                    <caption>其它信息</caption>
-                    <tbody>
-                        <tr>
-                            <td>状态</td>
-                            <td>已激活</td>
-                        </tr>
-                        <tr>
-                            <td>用户组</td>
-                            <td>李建鹏</td>
-                        </tr>
-                        <tr>
-                            <td>开通时间</td>
-                            <td>516805886@qq.com</td>
-                        </tr>
-                        <tr>
-                            <td>注册时长</td>
-                            <td>测试等级</td>
-                        </tr>
-                        <tr >
-                            <td rowspan="5">登录记录</td>
-                            <td>Date: 2020-07-20 22:02IP Address:  112.43.154.11Host: 112.43.15</td>
-                        </tr>
-                        
-                        <tr >
-                            <td>Date: 2020-07-20 22:02IP Address:  112.43.154.11Host: 112.43.15</td>
-                        </tr>
-                        
-                        <tr >
-                            <td>Date: 2020-07-20 22:02IP Address:  112.43.154.11Host: 112.43.15</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                <div class="bill_inp">
+                    <ul>
+                        <li>
+                            <span>
+                                <label>证&nbsp;&nbsp;书&nbsp;&nbsp;&nbsp;类&nbsp;&nbsp;型</label>
+                                <select name="" id="">
+                                    <option value="">全部</option>
+                                </select>
+                            </span>
+                            <span>证书品牌
+                                <select name="" id="">
+                                    <option value="">全部</option>
+                                </select>
+                            </span>
+                            <span>实例状态
+                                <select name="" id="">
+                                    <option value="">全部</option>
+                                </select>
+                            </span>
+                        </li>
+                        <li>
+                            证书有效时间
+                            <input type="date"> ~
+                            <input type="date">
+                        </li>
+                        <li>
+                            <button type="button">搜索</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table_box bill_tabledata">
+                    <table id="bill_data" class="table_datastyle">
+                        <thead>
+                            <tr>
+                                <th>订单编号</th>
+                                <th>产品名称</th>
+                                <th>金额</th>
+                                <th>付款时间</th>
+                                <th>开通时间</th>
+                                <th>到期时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>200328kwmkdch0zh</td>
+                                <td>PositiveSSL DV SSL证书</td>
+                                <td>5000.00</td>
+                                <td>2020-08-06</td>
+                                <td>2020-08-06</td>
+                                <td>2020-08-06</td>
+                                <td>已签发</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class="product_serve new_product">
-            <h2>新购产品  
-                <button type="button">新购</button>
-            </h2>
-            <div class="product_box">
-                <table id="newproduct_dataLists" >
+        <!-- 交易记录 -->
+        <div class="order_content ">
+            <div class="table_box">
+                <table id="record_dataLists" class="table_datastyle">
                     <thead>
                         <tr>
-                            <th>订单编号</th>
-                            <th>产品名称</th>
+                            <th>流水号</th>
+                            <th>记账日期</th>
+                            <th>交易类型</th>
+                            <th>付款方式</th>
                             <th>金额</th>
-                            <th>付款时间</th>
-                            <th>开通时间</th>
-                            <th>到期时间</th>
-                            <th>状态</th>
+                            <th>余额</th>
+                            <th>备注</th>
+                            <th>相关账单</th>
                         </tr>
                     </thead>
                     <tbody>
-    
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="product_serve due_product">
-            <h2>到期产品  
-                <button type="button">新购</button>
-            </h2>
-            <div class="product_box">
-                <table id="dueproduct_dataLists" >
-                    <thead>
                         <tr>
-                            <th>订单编号</th>
-                            <th>产品名称</th>
-                            <th>付款时间</th>
-                            <th>开通时间</th>
-                            <th>到期时间</th>
-                            <th>剩余时间</th>
-                            <th>状态</th>
+                            <td>420000017782390081989080</td>
+                            <td>2020-08-06</td>
+                            <td>消费</td>
+                            <td>零钱支付</td>
+                            <td>5000.00</td>
+                            <td>300.00</td>
+                            <td>
+                                <input type="text"><button>保存</button>
+                            </td>
+                            <td></td>
                         </tr>
-                    </thead>
-                    <tbody>
-    
                     </tbody>
+                    <tfoot>
+                        <tr class="checkall_btn">
+                            <td align="left" colspan="4">
+                                <button type="button">添加收款</button>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
-    </div>
-    <div  class="order_content">
-        火爆娱乐：<br>
-        《跑男》<br>
-        《中国好声音》
-    </div>
-    <div   class="order_content">
-        <div class="product_serve new_product">
-            <h2>新购产品  
-                <button type="button">新购</button>
-            </h2>
-            <div class="product_box">
-                <table id="newproduct_dataLists" >
-                    <thead>
-                        <tr>
-                            <th>订单编号</th>
-                            <th>产品名称</th>
-                            <th>金额</th>
-                            <th>付款时间</th>
-                            <th>开通时间</th>
-                            <th>到期时间</th>
-                            <th>状态</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="product_serve due_product">
-            <h2>到期产品  
-                <button type="button">新购</button>
-            </h2>
-            <div class="product_box">
-                <table id="dueproduct_dataLists" >
-                    <thead>
-                        <tr>
-                            <th>订单编号</th>
-                            <th>产品名称</th>
-                            <th>付款时间</th>
-                            <th>开通时间</th>
-                            <th>到期时间</th>
-                            <th>剩余时间</th>
-                            <th>状态</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    
-                    </tbody>
-                </table>
-            </div>
+        <!-- 修改等级 -->
+        <div class="order_content">
+            热门电视剧：
         </div>
     </div>
-    <div   class="order_content">
-        热门电视剧： <br>
-        《三生三世》www <br>
-        《我们的少年时代》
-    </div>
-    <div   class="order_content">
-        热门电视剧： <br>
-        《三生三世》www <br>
-        《我们的少年时代》
-    </div>
-</div>
 </div>
 
 
@@ -267,11 +426,11 @@
 <script>
     //获取订阅管理-所有订单
     var jsonProduct = [
-        { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "2天", "renewal_cycle": "1年", "product_status":"已签发"},   //json[0]
-        { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "7天", "renewal_cycle": "1年", "product_status":"已签发"},
-        { "name": "ljp2", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date":"1个月", "renewal_cycle": "1年",  "product_status":"已签发"},
-        { "name": "ljp3", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "2个月", "renewal_cycle": "1年","product_status":"已签发" },
-        { "name": "ljp4", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "3天", "renewal_cycle": "1年", "product_status":"已签发"},
+        { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "2天", "renewal_cycle": "1年", "product_status": "已签发" },   //json[0]
+        { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "7天", "renewal_cycle": "1年", "product_status": "已签发" },
+        { "name": "ljp2", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "1个月", "renewal_cycle": "1年", "product_status": "已签发" },
+        { "name": "ljp3", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "2个月", "renewal_cycle": "1年", "product_status": "已签发" },
+        { "name": "ljp4", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "3天", "renewal_cycle": "1年", "product_status": "已签发" },
     ];
     getProductServe()
     function getProductServe() {
@@ -280,7 +439,7 @@
             tableInfo += "<tr>"
                 //遍历Row中的每一列
                 //获取Table中单元格的内容
-                + " <td>" + jsonProduct[i].order_num  + "</td> "
+                + " <td>" + jsonProduct[i].order_num + "</td> "
                 + "<td>" + jsonProduct[i].product_name + "</td>"
                 + "<td>5000.00</td>"
                 + "<td>2020-08-03</td>"
@@ -292,7 +451,7 @@
         }
         $(".right_content #newproduct_dataLists tbody").html(tableInfo)
     }
-
+    //获取到期产品
     getDueproduct()
     function getDueproduct() {
         var tableInfo = ""
@@ -300,7 +459,7 @@
             tableInfo += "<tr>"
                 //遍历Row中的每一列
                 //获取Table中单元格的内容
-                + " <td>" + jsonProduct[i].order_num  + "</td> "
+                + " <td>" + jsonProduct[i].order_num + "</td> "
                 + "<td>" + jsonProduct[i].product_name + "</td>"
                 + "<td>2020-08-03 </td>"
                 + "<td>2020-08-03 </td>"
@@ -311,5 +470,45 @@
             tableInfo += "</tr>";
         }
         $(".right_content #dueproduct_dataLists tbody").html(tableInfo)
+
+    }
+    // 获取交易记录
+    getRecord()
+    function getRecord() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += "<tr>"
+                //遍历Row中的每一列
+                //获取Table中单元格的内容
+                + " <td>420000017782390081989080</td> "
+                + "<td>2020-08-06</td>"
+                + "<td>消费 </td>"
+                + "<td>零钱支付 </td>"
+                + "<td>6000.00</td>"
+                + "<td>300.00</td>"
+                + "<td> <input type='text'><button>保存</button></td><td></td>";
+
+            tableInfo += "</tr>";
+        }
+        $(".right_content #record_dataLists tbody").append(tableInfo)
+    }
+    //获取账单
+    getBillData()
+    function getBillData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += `
+            <tr>
+                                <td>200328kwmkdch0zh</td>
+                                <td>PositiveSSL DV SSL证书</td>
+                                <td>5000.00</td>
+                                <td>2020-08-06</td>
+                                <td>2020-08-06</td>
+                                <td>2020-08-06</td>
+                                <td>已签发</td>
+                            </tr>
+            `;
+        }
+        $(".right_content #bill_data tbody").append(tableInfo)
     }
 </script>
