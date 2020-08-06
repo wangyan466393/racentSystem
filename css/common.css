@@ -258,6 +258,6 @@ a:hover {
 }
 .right_content{
     padding: 25px 0 25px 25px;
-    width: 77%;
+    width: calc(100% - 320px);
     height: calc(100% - 50px);
 }
