@@ -4,7 +4,7 @@ $(function () {
         var sId = $(this).data("id");  //获取data-id的值
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
-        $(".nav li[data-id='"+sId+"']").addClass('active').siblings().removeClass('active');
+        $(".nav>ul>li[data-id='"+sId+"']").addClass('active').siblings().removeClass('active');
     });
      //导航
     $(".nav").on("click", "li", function (e) {
