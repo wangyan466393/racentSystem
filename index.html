@@ -6,7 +6,8 @@
     <title>Racent锐成信息</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/tab.css">
-
+    <!-- 软键盘样式 -->
+    <link rel="stylesheet" href="css/keyboard.css">
 </head>
 <body>
 <!--header-->
@@ -31,7 +32,7 @@
                             <a href="#">财务管理</a>
                         </li>
                         <li><a href="#">客服支持</a></li>
-                        <li><a href="#">商品管理</a></li>
+                        <li data-id="commodityManagement"><a href="#">商品管理</a></li>
                         <li><a href="#">系统配置</a></li>
                     </ul>
                 </div>
@@ -52,11 +53,11 @@
             </p>
             <ul class="leftMenus">
               <li data-id="orderManagement" class="active"><a class="icon_01">订单管理</a> </li>
-              <li><a href="#" class="icon_02">收款记录</a></li>
+              <li data-id='finance'><a href="#" class="icon_02">收款记录</a></li>
               <li><a href="#" class="icon_03">交易流水</a></li>
               <li><a href="#" class="icon_04">发票管理</a></li>
               <li><a href="#" class="icon_05">工单</a></li>
-              <li><a href="#" class="icon_06">商品管理</a></li>
+              <li data-id="commodityManagement"><a class="icon_06">商品管理</a></li>
               <li><a href="#" class="icon_07">商品可配置项管理</a></li>
               <li><a href="#" class="icon_08">价格等级设置</a></li>
               <li><a href="#" class="icon_09">员工管理</a></li>

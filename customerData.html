@@ -1,3 +1,4 @@
+
 <div id="content_box" class="customer_info">
     <h2>用户信息</h2>
     <ul id="tab">
@@ -6,7 +7,7 @@
         <li><a href="#">产品/服务</a></li>
         <li><a href="#">账单</a></li>
         <li><a href="#">交易记录</a></li>
-        <li><a href="#">修改等级</a></li>
+        <li><a href="#">修改客户等级</a></li>
     </ul>
     <div id="content">
         <!-- 信息总览 -->
@@ -257,8 +258,7 @@
                     </table>
                 </div>
             </div>
-            <button type="button" class="personal_savebtn">保存更改</button>
-            <button type="button" class="personal_canelbtn">取消更改</button>
+            
         </div>
         <!-- 产品服务 -->
         <div class="order_content">
@@ -415,15 +415,81 @@
         </div>
         <!-- 修改等级 -->
         <div class="order_content">
-            热门电视剧：
+            <div class="level_content">
+                <table>
+                    <tr>
+                        <td>
+                            客户名
+                        </td>
+                        <td><input type="text" disabled></td>
+                        <td>强制修改密码</td>
+                        <td>
+                            <label for="" id="virtual_key">
+                                <input type="text" disabled id="input" maxlength="16">
+                                <a href="#" id="icon_keyboard"></a>
+                                <div id="main_keyboard"></div>
+                            </label>
+                        </td>
+                        <td>客户邮箱</td>
+                        <td><input type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>网站信息</td>
+                        <td><input type="text" disabled></td>
+                        <td>客户等级</td>
+                        <td><input type="text" disabled></td>
+                        <td>客户经理</td>
+                        <td><input type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>透支金额</td>
+                        <td><input type="text" disabled></td>
+                        <td>开票类型</td>
+                        <td><input type="text" disabled></td>
+                        <td>币种</td>
+                        <td><input type="text" disabled></td>
+                    </tr>
+                </table>
+            </div>
+            
         </div>
     </div>
 </div>
-
+<!-- 个人资料按钮 -->
+<div class="personal_box_btn">
+    <button type="button" class="personal_savebtn">保存更改</button>
+    <button type="button" class="personal_canelbtn">取消更改</button>
+</div>
+<!-- 修改等级按钮 -->
+<div class="level_box">
+    <button type="button" class="edit_btn">确认修改</button>
+    <button type="button" class="del_btn" style="margin-right: 0;">取消修改</button>
+</div>
 
 
 <script src="js/jquery-1.11.3.js"></script>
+<!-- 软键盘插件 -->
+<script src="js/index.js"></script>
 <script>
+    //软键盘
+    const keyboard = new aKeyboard.keyboard({
+        el: '#main_keyboard',
+        style: {},
+        fixedBottomCenter: true
+    })
+    keyboard.inputOn('#input', 'value')
+    keyboard.onclick('Enter', function() {
+        // alert('oh! 这是自定义事件！它覆盖了原始的回车事件。This is a custom event! It override the original enter event.');
+        $("#main_keyboard").css("display","none")
+        console.log($("#input").val())
+        $("#input").prop("disabled","disabled")
+    })
+    $("#icon_keyboard").click(function(e){
+        e.preventDefault()
+        $("#input").removeAttr("disabled").focus();
+        $("#main_keyboard").css("display","block")
+    })
+
     //获取订阅管理-所有订单
     var jsonProduct = [
         { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": "2天", "renewal_cycle": "1年", "product_status": "已签发" },   //json[0]

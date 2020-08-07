@@ -89,7 +89,7 @@ td {
     cursor: pointer;
 }
 
-/* ***********************订单管理 **********************************/
+/* ***********************销售管理-订单管理 **********************************/
 .order_search {
     margin-bottom: 20px;
     border-radius: 7px;
@@ -168,13 +168,13 @@ td {
     color: #ec6c32;
 }
 
-/* ************************订单详情 *************************/
+/* ************************销售管理-订单详情 *************************/
 .detail_title{
     color: #ec6c32;
 }
 .detail_content table
 {
-    border-collapse: separate;
+    border-collapse: separate !important;
     border-spacing: 0px 30px;
 }
 .detail_content table tr td:nth-child(2n){
@@ -239,7 +239,7 @@ td {
     background-color: #fff;
 }
 
-/******************* 产品服务 *************************************/
+/******************* 客户资料-产品服务 *************************************/
 .customer_info .product_serve{
     margin-bottom: 20px;
 }
@@ -283,7 +283,7 @@ td {
 .customer_info .product_serve .product_box tbody td:first-child{
     color: #ec6c32;
 }
-/* *********************用户信息 ********************************/
+/* *********************客户资料-用户信息 ********************************/
 .user_info{
     display: flex;
     margin-bottom: 20px;
@@ -349,6 +349,49 @@ td {
     color:#ec6c32 !important;
 }
 
+/* ********************客户资料-修改等级****************************************** */
+.level_content table{
+    border-collapse: separate !important;
+    border-spacing: 0px 30px;
+}
+.level_content table td:nth-child(2n-1){
+    padding-right: 10px;
+    width: 73px;
+    text-align: right;
+}
+.level_content table td:nth-child(2n){
+    text-align: left;
+}
+.level_content input{
+    width: 220px;
+    height: 30px;
+    outline: none;
+}
+#virtual_key{
+    position: relative;
+}
+.level_content a{
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    width: 17px;
+    height: 11px;
+    background: url(../images/keyboard.png) no-repeat left;
+}
+.level_box{
+    display: none;
+    margin-top: 30px;
+    float: right;
+}
+.level_box button{
+    width: 90px;
+    height: 36px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
 /* 财务管理  - 发票列表 */
 .finance-search>select{
     width: 173px;
@@ -367,7 +410,7 @@ td {
     font-size: 14px;
     border: none;
 }
-/* *******************交易记录**************************************** */
+/* *******************客户资料-交易记录**************************************** */
 .table_datastyle  tbody tr{
     border-bottom: 1px solid #e6e6e6;
 }
@@ -390,7 +433,7 @@ td {
     border: 1px solid #d9d9d9;
     border-radius: 5px;
 }
-/* **********************个人资料******************************************* */
+/* **********************客户资料-个人资料******************************************* */
 .personal_data{
     width: 48%;
     background-color:#f6faff ;
@@ -415,19 +458,23 @@ td {
     border-collapse: separate;
     border-spacing: 0px 10px;
 }
-.personal_box button{
+ .personal_box_btn{
+    display: none;
+    margin-top: 30px;
+}
+.personal_box_btn button{
     padding: 8px 30px;
     margin-right: 10px;
     border: none;
     color:#fff;
 }
-.personal_box .personal_savebtn{
+.personal_box_btn .personal_savebtn{
     background-color: #ec6c32;
 }
-.personal_box .personal_canelbtn{
+.personal_box_btn .personal_canelbtn{
     background-color: #999999;
 }
-/* ***********************账单********************************************* */
+/* ***********************客户资料-账单********************************************* */
 #content .bill .bill_inp{
     padding: 10px;
     margin-bottom: 10px;
