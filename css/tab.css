@@ -67,7 +67,7 @@ td {
     padding: 5px 0;
     border-collapse: collapse;
 }
-#content #order_dataLists tbody tr
+#content #order_dataLists tbody td
 {
     border-bottom: 1px solid #e6e6e6;
 }
@@ -411,6 +411,23 @@ td {
     border: none;
 }
 /* *******************客户资料-交易记录**************************************** */
+.finance_btn button{
+    margin-left: 12px;
+    color: #333;
+    border: none;
+    background-color: #d9d9d9;
+    height: 26px;
+    width: 94px;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.finance_btn .details{
+    background-color: #ec6c32;
+    color: #fff;
+}
+/* *******************交易记录**************************************** */
 .table_datastyle  tbody tr{
     border-bottom: 1px solid #e6e6e6;
 }
