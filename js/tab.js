@@ -21,6 +21,15 @@ $(function () {
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
     });
+    // 财务管理
+    $(".right_content").on("click", ".finance_btn button", function (e) {
+        e.preventDefault();
+        console.log(e)
+        var sId = $(this).data("id");  //获取data-id的值
+        window.location.hash = sId;  //设置锚点
+        loadInner(sId);
+    });
+
     function loadInner(sId) {
         var sId = window.location.hash;
         var pathn, i;
@@ -31,6 +40,7 @@ $(function () {
             case "#customerData": pathn = "customerData.html"; break;
             // 财务管理
             case "#finance": pathn = "finance.html";i=1; break;
+            case "#financeDetails": pathn = "financeDetails.html";i=2; break;
             default: pathn = "subscriptionManagement.html"; i = 0; break;
         }
         $(".right_content").load(pathn); //加载相对应的内容
