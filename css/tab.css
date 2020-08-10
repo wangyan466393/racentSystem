@@ -410,6 +410,11 @@ td {
     font-size: 14px;
     border: none;
 }
+.detailCheck input{
+    width: 34px;
+    height: 14px;
+    vertical-align:-2px;
+}
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{
     margin-left: 12px;

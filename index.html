@@ -6,12 +6,9 @@
     <title>Racent锐成信息</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/tab.css">
-<<<<<<< HEAD
     <!-- 软键盘样式 -->
     <link rel="stylesheet" href="css/keyboard.css">
-=======
     <link rel="stylesheet" href="css/page.css">
->>>>>>> wangyan
 </head>
 <body>
 <!--header-->
@@ -32,8 +29,13 @@
                                 <li data-id="subscriptionManagement"><a href="#">订阅管理</a></li>
                             </ul>
                         </li>
-                        <li data-id='finance'>
+                        <li data-id='invoiceControl'>
                             <a href="#">财务管理</a>
+                            <ul class="select_menus">
+                                    <li data-id="invoiceControl"><a href="#">发票管理</a></li>
+                                    <li data-id=""><a href="#">流水记录</a></li>
+                                    <li data-id=""><a href="#">收款记录</a></li>
+                            </ul>
                         </li>
                         <li><a href="#">客服支持</a></li>
                         <li data-id="commodityManagement"><a href="#">商品管理</a></li>
@@ -57,9 +59,9 @@
             </p>
             <ul class="leftMenus">
               <li data-id="orderManagement" class="active"><a class="icon_01">订单管理</a> </li>
-              <li data-id='finance'><a href="#" class="icon_02">收款记录</a></li>
+              <li><a  class="icon_02">收款记录</a></li>
               <li><a href="#" class="icon_03">交易流水</a></li>
-              <li><a href="#" class="icon_04">发票管理</a></li>
+              <li data-id="finance"><a  class="icon_04">发票管理</a></li>
               <li><a href="#" class="icon_05">工单</a></li>
               <li data-id="commodityManagement"><a class="icon_06">商品管理</a></li>
               <li><a href="#" class="icon_07">商品可配置项管理</a></li>

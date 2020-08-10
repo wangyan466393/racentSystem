@@ -44,8 +44,8 @@ $(function () {
             //商品管理
             case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
             // 财务管理
-            case "#finance": pathn = "finance.html";i=1; break;
-            case "#financeDetails": pathn = "financeDetails.html";i=2; break;
+            case "#invoiceControl": pathn = "invoiceControl.html";i=1; break;
+            case "#invoiceDetails": pathn = "invoiceDetails.html";i=2; break;
             default: pathn = "subscriptionManagement.html"; i = 0; break;
         }
         $(".right_content").load(pathn); //加载相对应的内容
