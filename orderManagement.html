@@ -1,64 +1,81 @@
 <div id="content_box">
     <h2>订单列表</h2>
-<div id="content">
-    <div id="order_all"  class="order_content">
-        <div class="order_search">
-            <span>
-                <select name="" id="">
-                    <option value="">全部</option>
-                </select>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="">
+                        <option value="">全部</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="text" placeholder="请输出用户名" id="order_username" style="width: 150px;">
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入订单号">
+                </span>
+                <span>
+                    <input type="date" value="付款日期"">
             </span>
             <span>
-                <input type="text" placeholder="请输出用户名" style="width: 150px;">
-            </span>
-            <span>
-                <input type="text" placeholder="请输入订单号">
-            </span>
-            <span>
-                <input type="date" value="付款日期"">
-            </span>
-            <span>
-                <button type="button">搜索</button>
-            </span>
-        </div>
-        <div class="table_box">
-            <table id="order_dataLists" >
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>用户名</th>
-                        <th>订单编号</th>
-                        <th>产品名称</th>
-                        <th>下单日期</th>
-                        <th>付款方式</th>
-                        <th>订单类型</th>
-                        <th>订单状态</th>
-                        <th>订单价格</th>
-                        <th>订单操作</th>
-                    </tr>
-                </thead>
-                <tbody>
+                <button type=" button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="order_dataLists">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>用户名</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>下单日期</th>
+                            <th>付款方式</th>
+                            <th>订单类型</th>
+                            <th>订单状态</th>
+                            <th>订单价格</th>
+                            <th>订单操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-                <tfoot>
-                    <tr class="checkall_btn">
-                        <td align="left" style="position: relative;">
-                            <input type="checkbox" id="check_all">
-                            <label for="check_all">全选</label>
-                        </td>
-                        <td align="left" colspan="4" >
-                            <button type="button">批量删除</button>
-                            <button type="button">批量修改</button>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                    </tbody>
+                    <tfoot>
+                        <tr class="checkall_btn">
+                            <td align="left" style="position: relative;">
+                                <input type="checkbox" id="check_all">
+                                <label for="check_all">全选</label>
+                            </td>
+                            <td align="left" colspan="4">
+                                <button type="button">批量删除</button>
+                                <button type="button">批量修改</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page">
+
+            </div>
         </div>
     </div>
 </div>
-</div>
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
 <script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 10, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 50, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
     var json = [
         { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },   //json[0]
         { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
@@ -91,8 +108,16 @@
     }
 
     //全选
-    $("#check_all").on("click",function(){
-        $("#order_all input[name='sub']").prop("checked", this.checked);  
+    $("#check_all").on("click", function () {
+        $("#order_all input[name='sub']").prop("checked", this.checked);
     });
-    
+    //搜索
+    $("#order_search").click(function () {
+        var txt = $("#order_username").val();
+        if ($.trim(txt) != "") {
+            $("table  tr:not('thead tr, tfoot tr')").hide().filter(":contains('" + txt + "')").show();
+        } else {
+            $("table tr:not('thead tr, tfoot tr')").show();
+        }
+    });
 </script>

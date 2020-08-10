@@ -1,0 +1,82 @@
+<div id="content_box" class="emailManagement_box">
+    <h2>邮件列表</h2>
+    <div id="content">
+        <div id="order_all"  class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="">
+                        <option value="">请选择类型</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </span>
+                <span>
+                    申请时间
+                    <input type="date" >
+                    ~
+                    <input type="date" >
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入申请人员">
+                </span>
+                <span>
+                    <input type="text" placeholder="收件对象">
+                </span>
+                <span>
+                    <button type="button">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="email_dataLists" >
+                    <thead>
+                        <tr>
+                            <th>提交时间</th>
+                            <th>邮件描述</th>
+                            <th>收件对象</th>
+                            <th>申请人员</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020-07-22 16:01:36</td>
+                            <td>Sectigo即将停止签发两年有效期证书，倒计时仅27天！</td>
+                            <td>普通级会员&客户经理为admin</td>
+                            <td>li</td>
+                            <td>已同意</td>
+                            <td>
+                                <a href="">预览</a> |
+                                <a href="">查看邮件</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button class="email_btn" data-id="createEmail">新建邮件</button>
+            </div>
+            <div class="page">
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 5, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 25, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+</script>

@@ -23,6 +23,13 @@ $(function () {
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
     });
+    //客户资料详情
+    $(".right_content").on("click", "#customer_dataLists a", function (e) {
+        e.preventDefault();
+        var sId = $(this).data("id");  //获取data-id的值
+        window.location.hash = sId;  //设置锚点
+        loadInner(sId);
+    });
     // 财务管理
     $(".right_content").on("click", ".finance_btn button", function (e) {
         e.preventDefault();
@@ -31,7 +38,14 @@ $(function () {
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
     });
-
+    //新建邮件
+    $(".right_content").on("click", ".email_btn", function (e) {
+        e.preventDefault();
+        console.log(e)
+        var sId = $(this).data("id");  //获取data-id的值
+        window.location.hash = sId;  //设置锚点
+        loadInner(sId);
+    });
     function loadInner(sId) {
         var sId = window.location.hash;
         var pathn, i;
@@ -40,13 +54,20 @@ $(function () {
             case "#orderManagement": pathn = "orderManagement.html"; i = 0; break;
             case "#orderDetail": pathn = "orderDetail.html"; break;
             case "#subscriptionManagement": pathn = "subscriptionManagement.html"; break;
+            case "#customerListsData": pathn = "customerListsData.html"; break;
             case "#customerData": pathn = "customerData.html"; break;
-            //商品管理
-            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
             // 财务管理
             case "#finance": pathn = "finance.html";i=1; break;
             case "#financeDetails": pathn = "financeDetails.html";i=2; break;
-            default: pathn = "subscriptionManagement.html"; i = 0; break;
+            
+            //客户支持
+            case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
+            case "#createEmail": pathn = "createEmail.html"; i=null;break;
+            //商品管理
+            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
+
+            default: pathn = "orderManagement.html";  break;
+            
         }
         $(".right_content").load(pathn); //加载相对应的内容
         $(".leftMenus li").eq(i).addClass("active").siblings().removeClass("active"); //当前列表高亮

@@ -33,9 +33,10 @@
 }
 #content_box {
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 10px 15px 30px 15px;
+    margin-bottom: 20px;
 }
-#content_box > h2{
+#content_box > h2 {
     padding-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -238,7 +239,26 @@ td {
     margin-left: 10px;
     background-color: #fff;
 }
-
+/* ******************客户资料-客户列表********************************************* */
+.customer_listdata #customer_dataLists td:last-child a{
+    color: #ec6c32;
+}
+#content #customer_dataLists td,#email_dataLists td{
+    border: 1px solid#e6e6e6;
+}
+#customer_dataLists tbody td:first-child{
+    color: #ec6c32;
+}
+.addUser_btn{
+    margin-top: 20px;
+    padding: 5px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    border-radius: 17px;
+    outline: none;
+    cursor: pointer;
+}
 /******************* 客户资料-产品服务 *************************************/
 .customer_info .product_serve{
     margin-bottom: 20px;
@@ -250,7 +270,7 @@ td {
 }
 .customer_info .product_serve h2 button{
    float: right;
-   padding: 5px 30px;
+    padding: 5px 30px;
     color: #fff;
     border: none;
     background-color: #ec6c32;
@@ -286,26 +306,37 @@ td {
 /* *********************客户资料-用户信息 ********************************/
 .user_info{
     display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .user_info>div{
-    float: left;
     width: 32%;
-    margin-right: 19px;
 }
 
-.customer_info .user_info table{
+.customer_info #content  .user_info table{
     text-align: left;
+    border: 1px solid #e6e6e6;
+}
+.user_info p{
+    margin-top: 15px;
 }
 .customer_info .user_info tr{
     height: 35px;
 }
 .user_info td{
     border: none;
+}
+.user_info .other_info td:first-child{
+    width: 80px;
     padding-left:20px ;
 }
-.user_info td:first-child{
-    width: 20%;
+.other_info span{
+    display: block;
+    margin-bottom: 6px;
+}
+.bill_info td:first-child{
+    width: 120px;
+    padding-left:20px ;
 }
 .user_info caption{
     padding: 10px 0;
@@ -515,4 +546,40 @@ td {
     border: none;
     border-radius: 7px;
     color: #fff;
+}
+
+/* *****************客服支持-邮件管理********************************* */
+.email_btn{
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    outline: none;
+    cursor: pointer;
+}
+#email_dataLists tbody a:first-child{
+    color: #ec6c32;
+}
+
+.createEmail_box input{
+    height: 28px;
+    width: calc( 100% - 54px );
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+}
+.createEmail_box label ,.createEmail_box input{
+    display: inline-block;
+    
+}
+.createEmail_box .email_content li{
+    white-space: nowrap;
+    width: 30%;
+}
+.edit_box{
+    background-color: #fff;
+}
+.edit_box > h3 {
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
 }
