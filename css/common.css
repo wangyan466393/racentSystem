@@ -24,6 +24,8 @@ input,button {
 }
 select{
     color: #999;
+    outline: none;
+    cursor: pointer;
 }
 button:hover{
     opacity: 0.9;
