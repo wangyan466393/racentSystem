@@ -86,7 +86,7 @@
     //订单管理--所有订单信息
     getTableData()
     function getTableData() {
-        debugger
+        // debugger
         var tableInfo = ""
         for (var i = 0; i < json.length; i++) {    //遍历Table的所有Row
             tableInfo += "<tr>"
@@ -118,8 +118,11 @@
         var  order_username = $("#order_username").val();   //用户名
         var order_number = $("#order_number").val();  //订单编号
         json=json.filter(item=>{
-            if(order_username !=""){
+            console.log(item)
+            if(order_username !="" || order_number != ""){
                 return item.name.indexOf(order_username)!==-1&&item.order_num.indexOf(order_number)!==-1
+            }else{
+
             }
             
         })

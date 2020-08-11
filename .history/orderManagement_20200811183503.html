@@ -118,8 +118,12 @@
         var  order_username = $("#order_username").val();   //用户名
         var order_number = $("#order_number").val();  //订单编号
         json=json.filter(item=>{
+            console.log(item)
             if(order_username !=""){
-                return item.name.indexOf(order_username)!==-1&&item.order_num.indexOf(order_number)!==-1
+                return item.name.indexOf(order_username)!==-1
+            }
+            if (order_number != "") {
+                return item.order_num.indexOf(order_number)!==-1
             }
             
         })

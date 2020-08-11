@@ -524,7 +524,7 @@ td {
 .personal_box_btn .personal_savebtn , .submit_audit{
     background-color: #ec6c32;
 }
-.personal_box_btn .personal_canelbtn , .preview_email{
+.personal_box_btn .personal_canelbtn{
     background-color: #999999;
 }
 /* ***********************客户资料-账单********************************************* */
@@ -648,7 +648,4 @@ td {
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
-}
-.submit_email_btn{
-    text-align: right;
 }

@@ -515,16 +515,16 @@ td {
     display: none;
     margin-top: 30px;
 }
-.personal_box_btn button , .submit_email_btn button{
+.personal_box_btn button{
     padding: 8px 30px;
     margin-right: 10px;
     border: none;
     color:#fff;
 }
-.personal_box_btn .personal_savebtn , .submit_audit{
+.personal_box_btn .personal_savebtn{
     background-color: #ec6c32;
 }
-.personal_box_btn .personal_canelbtn , .preview_email{
+.personal_box_btn .personal_canelbtn{
     background-color: #999999;
 }
 /* ***********************客户资料-账单********************************************* */
@@ -566,7 +566,7 @@ td {
 #email_dataLists tbody a:first-child{
     color: #ec6c32;
 }
-/* ******新建邮件********* */
+
 .createEmail_box input{
     height: 28px;
     width: calc( 100% - 54px );
@@ -590,22 +590,22 @@ td {
 }
 .edit_content {
     padding-left: 10px;
-    margin-top: 20px;
-    width: 80%;
+    width: 70%;
+    border: 1px solid red;
     box-sizing: border-box;
 }
-.edit_content>ul > li{
+.edit_content li{
     display: flex;justify-content: space-between;
     margin-bottom: 20px;
 }
 .edit_content input{
-    height: 30px;
+    height: 28px;
     border: 1px solid #ccc;
     background-color: #f6f6f6;
 }
 .edit_content span{
     display: inline-block;
-    width: 50px;
+    width: 40px;
 }
 .edit_content .sender{
     width: 260px;
@@ -622,33 +622,9 @@ td {
 }
 .upload-label{
     display: block;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #ec6c32;
-    color: #fff;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-}
-.file-upload{display: none;}
-.file_view{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-.file_view li{
-    margin-left: 10px;
-    margin-bottom: 10px;
-    width: 318px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid #e6e6e6;
-    background-color: #f6f6f6;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-}
-.submit_email_btn{
-    text-align: right;
+    box-shadow: rgb(251, 214, 171) 0px 0px 5px 3px;
+    border-radius: 11px;
 }

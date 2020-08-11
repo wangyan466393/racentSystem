@@ -88,62 +88,46 @@
             </li>
             <li>
                 <span>内容</span>
-                <div id="editor" style="width: 100%;">
+                <div id="editor">
                     <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
                 </div>
             </li>
             <li>
                 <span>附件</span>
-                <div style="width: 100%;display: flex;">
-                    <div class="upload-box">
-                        <label for="file" class="upload-label">
-                            添加附件
-                            <input class="file-upload" type="file" id="file">
-                        </label>
-                    </div>
-                    <div>
-                        <ul class="file_view">
-                            <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
-                            <li>1-1营销型网络产品建</li>
-                            <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
-                            <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
-                        </ul>
-                    </div>
+                <div class="upload-box">
+                    <label for="file" class="upload-label">
+                        添加附件
+                        <input class="file-upload" type="file" id="file">
+                    </label>
                 </div>
-                
-            </li>
-            <li style="line-height: 40px;">
-                <span>设置：</span>
-                <div style="width: 100%;">
-                    群发邮件设置：
-                    提交申请完成后
-                    <input type="text" style="width: 60px;">
-                    秒后自动发送，直至完成
+                <div>
+                    <ul class="file_view">
+                        <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
+                        <li>1-1营销型网络产品建</li>
+                        <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
+                        <li>1-1营销型网络产品建设服务合同V2.0-A4打印版.docx</li>
+                    </ul>
                 </div>
             </li>
         </ul>
     </div>
 </div>
-<div class="submit_email_btn">
-    <button type="button" class="submit_audit">提交审核</button>
-    <button type="button" class="preview_email">预览邮件</button>
-</div>
+
 <script src="js/wangEditor.min.js"></script>
 <script type="text/javascript">
 
 
     $(".file-upload").change(function(){
        var file = $(this)[0].files[0];
+       console.log(filename)
         var reg= /\.(doc|docx|xlsx)$/;
         if((file.size / 1024 / 1024) > 10) {
             alert("your file size if out of 10M limit");
             return;
         } else if(!reg.test(file.name)) {
-            alert("请上传文本文件");
+            alert("your audio file type must be.wav or.mp3 format.");
             return;
         }
-
-        $(".file_view").append("<li>"+file.name+"</li>")
     })
 
 

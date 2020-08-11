@@ -81,19 +81,18 @@
         { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
         { "name": "小李", "order_num": "202110803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
         { "name": "李四", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
-        { "name": "张三", "order_num": "20210803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+        { "name": "张三", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
     ];
     //订单管理--所有订单信息
     getTableData()
     function getTableData() {
-        debugger
         var tableInfo = ""
         for (var i = 0; i < json.length; i++) {    //遍历Table的所有Row
             tableInfo += "<tr>"
                 //遍历Row中的每一列
                 //获取Table中单元格的内容
                 + " <td align='left' ><input type='checkbox' name='sub'></td> "
-                + " <td class='name'>" + json[i].name + "</td> "
+                + " <td>" + json[i].name + "</td> "
                 + "<td class='num'>" + json[i].order_num + "</td>"
                 + "<td>Sectigo EV代码签名</td>"
                 + "<td>2020-08-03 18:35:00</td>"
@@ -112,29 +111,26 @@
     $("#check_all").on("click", function () {
         $("#order_all input[name='sub']").prop("checked", this.checked);
     });
-
     //搜索
     $("#order_search").click(function () {
-        var  order_username = $("#order_username").val();   //用户名
+        var order_username = $("#order_username").val();   //用户名
         var order_number = $("#order_number").val();  //订单编号
-        json=json.filter(item=>{
-            if(order_username !=""){
-                return item.name.indexOf(order_username)!==-1&&item.order_num.indexOf(order_number)!==-1
-            }
-            
-        })
-        getTableData()
-        // var sel_val = $("#sel_val").val();  
-        // if ($.trim(order_username) != "") {
-        //     $("table tbody tr").hide();
-        //     $("table tbody tr .name:contains('" + order_username + "')").parent().show();
-        // } 
-        // if ($.trim(order_number) != "") {
-        //     $("table tbody tr").hide();
-        //     $("table tbody tr .num:contains('" + order_number + "')").parent().show();
-        // }
-        
+        var sel_val = $("#sel_val").val();  
+        alert(order_number)
+        console.log($("table  tr:not('thead tr, tfoot tr') .num:contains('" + order_number + "')").parent())
+        if ($.trim(order_username) != "") {
+            $("table  tr:not('thead tr, tfoot tr')").hide().filter(":contains('" + order_username + "')").show();
+        } 
+        if ($.trim(order_number) != "") {
+            $("table  tr:not('thead tr, tfoot tr')").hide().filter(".num:contains('" + order_number + "')").show();
+        }
+
         // if(sel_val == "all"){
+        //     $("table tr:not('thead tr, tfoot tr')").show();
+        // }
+        // if ($.trim(order_number) != "") {
+        //     $("table  tr:not('thead tr, tfoot tr')").hide().filter(":contains('" + order_number + "')").show();
+        // } else {
         //     $("table tr:not('thead tr, tfoot tr')").show();
         // }
 

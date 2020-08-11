@@ -86,7 +86,6 @@
     //订单管理--所有订单信息
     getTableData()
     function getTableData() {
-        debugger
         var tableInfo = ""
         for (var i = 0; i < json.length; i++) {    //遍历Table的所有Row
             tableInfo += "<tr>"
@@ -117,23 +116,16 @@
     $("#order_search").click(function () {
         var  order_username = $("#order_username").val();   //用户名
         var order_number = $("#order_number").val();  //订单编号
-        json=json.filter(item=>{
-            if(order_username !=""){
-                return item.name.indexOf(order_username)!==-1&&item.order_num.indexOf(order_number)!==-1
-            }
-            
-        })
-        getTableData()
-        // var sel_val = $("#sel_val").val();  
-        // if ($.trim(order_username) != "") {
-        //     $("table tbody tr").hide();
-        //     $("table tbody tr .name:contains('" + order_username + "')").parent().show();
-        // } 
-        // if ($.trim(order_number) != "") {
-        //     $("table tbody tr").hide();
-        //     $("table tbody tr .num:contains('" + order_number + "')").parent().show();
-        // }
-        
+        var sel_val = $("#sel_val").val();  
+        if ($.trim(order_username) != "") {
+            $("table tbody tr").hide();
+            $("table tbody tr .name:contains('" + order_username + "')").parent().show();
+        } 
+        if ($.trim(order_number) != "") {
+            $("table tbody tr").hide();
+            $("table tbody tr .num:contains('" + order_number + "')").parent().show();
+        }
+
         // if(sel_val == "all"){
         //     $("table tr:not('thead tr, tfoot tr')").show();
         // }
