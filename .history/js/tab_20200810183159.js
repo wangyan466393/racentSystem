@@ -56,16 +56,10 @@ $(function () {
             case "#subscriptionManagement": pathn = "subscriptionManagement.html"; break;
             case "#customerListsData": pathn = "customerListsData.html"; break;
             case "#customerData": pathn = "customerData.html"; break;
-            //客户支持
-            case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
-            case "#createEmail": pathn = "createEmail.html"; i=null;break;
             // 财务管理
             case "#invoiceControl": pathn = "invoiceControl.html";i=1; break;
             case "#invoiceDetails": pathn = "invoiceDetails.html";i=2; break;
-           //商品管理
-           case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
-
-           default: pathn = "orderManagement.html";  break;
+            default: pathn = "subscriptionManagement.html"; i = 0; break;
         }
         $(".right_content").load(pathn); //加载相对应的内容
         $(".leftMenus li").eq(i).addClass("active").siblings().removeClass("active"); //当前列表高亮

@@ -24,16 +24,35 @@
                         <li class="active" data-id="orderManagement">
                             <a href="#">销售管理</a>
                             <ul class="select_menus">
-                                <li data-id="customerData"><a href="#">客户资料</a></li>
+                                <li data-id="customerListsData"><a href="#">客户资料</a></li>
                                 <li data-id="orderManagement"><a href="#">订单管理</a></li>
                                 <li data-id="subscriptionManagement"><a href="#">订阅管理</a></li>
                             </ul>
                         </li>
-                        <li data-id='finance'>
+                        <li data-id='invoiceControl'>
                             <a href="#">财务管理</a>
+                            <ul class="select_menus">
+                                    <li data-id="invoiceControl"><a href="#">发票管理</a></li>
+                                    <li data-id=""><a href="#">流水记录</a></li>
+                                    <li data-id=""><a href="#">收款记录</a></li>
+                            </ul>
                         </li>
-                        <li><a href="#">客服支持</a></li>
-                        <li data-id="commodityManagement"><a href="#">商品管理</a></li>
+                        <li>
+                            <a href="#">客服支持</a>
+                            <ul class="select_menus">
+                                <li data-id=""><a href="#">工单管理</a></li>
+                                <li data-id=""><a href="#">文章管理</a></li>
+                                <li data-id="emailManagement"><a href="#">邮件管理</a></li>
+                                <li data-id=""><a href="#">知识库</a></li>
+                            </ul>
+                        </li>
+                        <li data-id="commodityManagement">
+                            <a href="#">商品管理</a>
+                            <ul class="select_menus">
+                                <li data-id=""><a href="#">可配置项</a></li>
+                                <li data-id="commodityManagement"><a href="#">商品管理</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">系统配置</a></li>
                     </ul>
                 </div>
@@ -54,9 +73,9 @@
             </p>
             <ul class="leftMenus">
               <li data-id="orderManagement" class="active"><a class="icon_01">订单管理</a> </li>
-              <li data-id='finance'><a href="#" class="icon_02">收款记录</a></li>
+              <li><a  class="icon_02">收款记录</a></li>
               <li><a href="#" class="icon_03">交易流水</a></li>
-              <li><a href="#" class="icon_04">发票管理</a></li>
+              <li data-id="finance"><a  class="icon_04">发票管理</a></li>
               <li><a href="#" class="icon_05">工单</a></li>
               <li data-id="commodityManagement"><a class="icon_06">商品管理</a></li>
               <li><a href="#" class="icon_07">商品可配置项管理</a></li>

@@ -42,26 +42,29 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    <div  class="order_content">
-        火爆娱乐：<br>
-        《跑男》<br>
-        《中国好声音》
-    </div>
-    <div   class="order_content">
-        热门电视剧： <br>
-        《三生三世》 <br>
-        《我们的少年时代》
-    </div>
-    <div   class="order_content">
-        热门电视剧： <br>
-        《三生三世》www <br>
-        《我们的少年时代》
+        <div class="page">
+
+        </div>
     </div>
 </div>
 </div>
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
 <script>
+
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 5, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 25, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+
     //获取订阅管理-所有订单
     var jsonSub = [
         { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},   //json[0]

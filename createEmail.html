@@ -1,0 +1,129 @@
+<div id="content_box" class="createEmail_box">
+    <h2>邮件详情</h2>
+    <ul id="tab">
+        <li style="background-color: #fff;"><a href="#">选择客户</a></li>
+    </ul>
+    <div id="content" style="margin-bottom: 40px;">
+        <div id="order_all" >
+            <div class="email_content">
+                <ul style="display: flex;justify-content: space-between;">
+                    <li>
+                            <label for="">用户等级</label>
+                            <input type="text" placeholder="上海麒证硕麟数据科技有限公司">
+                    </li>
+                    <li>
+                        <label for="">订阅全部</label>
+                            <input type="text" placeholder="91310118MA1JMT1606">
+                    </li>
+                    <li>
+                       <label for="">客户经理</label>
+                            <input type="text" placeholder="兴业银行股份有限公司上海自贸试验区支行">
+                    </li>
+                </ul>
+                <!-- <table id="">
+                    <tr>
+                        <td>
+                            <label for="">用户等级</label>
+                            <input type="text" placeholder="上海麒证硕麟数据科技有限公司">
+                        </td>
+                        <td>
+                            <label for="">订阅全部</label>
+                            <input type="text" placeholder="91310118MA1JMT1606">
+                        </td>
+                        <td>
+                            <label for="">客户经理</label>
+                            <input type="text" placeholder="兴业银行股份有限公司上海自贸试验区支行">
+                        </td>
+                    </tr>
+                </table> -->
+            </div>
+        </div>
+    </div>
+    <ul id="tab">
+        <li style="background-color: #fff;"><a href="#">选择产品</a></li>
+    </ul>
+    <div id="content">
+        <div id="order_all" >
+            <div class="email_content">
+                <ul style="display: flex;justify-content: space-between;">
+                    <li>
+                            <label for="">用户等级</label>
+                            <input type="text" placeholder="上海麒证硕麟数据科技有限公司">
+                    </li>
+                    <li>
+                        <label for="">订阅全部</label>
+                            <input type="text" placeholder="91310118MA1JMT1606">
+                    </li>
+                    <li>
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="edit_box">
+    <h3>撰写邮件</h3>
+
+    <div class="edit_content">
+        <ul>
+            <li style="display: flex;justify-content: space-between;">
+                
+                <p>
+                    <span>发件人 </span><input type="text" class="sender">
+                </p>
+                <p>
+                    <span>域名 </span>
+                    <input type="text" class="domain_name">
+                </p>
+                
+            </li>
+            <li>
+                <span>收件人</span>
+                <input type="text" class="attn">
+            </li>
+            <li>
+                <span>主题</span>
+                <input type="text" class="theme" placeholder="Sectigo即将停止签发两年有效期证书，倒计时仅27天！">
+            </li>
+            <li>
+                <span>内容</span>
+                <div id="editor">
+                    <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/wangEditor.min.js"></script>
+<script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#editor')
+        // 或者 var editor = new E( document.getElementById('editor') )
+        editor.customConfig.menus =[
+            'head',  // 标题
+            'bold',  // 粗体
+            'fontSize',  // 字号
+            'fontName',  // 字体
+            'italic',  // 斜体
+            'underline',  // 下划线
+            'strikeThrough',  // 删除线
+            'foreColor',  // 文字颜色
+            'backColor',  // 背景颜色
+            'link',  // 插入链接
+            'list',  // 列表
+            'justify',  // 对齐方式
+            'quote',  // 引用
+            'emoticon',  // 表情
+            'image',  // 插入图片
+            'table',  // 表格
+            'video',  // 插入视频
+            'code',  // 插入代码
+            'undo',  // 撤销
+            'redo'  // 重复
+        ]
+        editor.create()
+   
+</script>
