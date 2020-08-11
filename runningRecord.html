@@ -1,0 +1,88 @@
+<div id="content_box">
+    <h2>流水列表</h2>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <input type="text" placeholder="请输出用户名" id="order_username" style="width: 150px;">
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入订单号">
+                </span>
+                <span>
+                    <input type="date" value="付款日期"">
+                </span>
+                <span>
+                    <button type=" button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="subscription_dataLists">
+                    <thead>
+                        <tr>
+                            <th>用户名称</th>
+                            <th>用户邮箱</th>
+                            <th>单据号</th>
+                            <th>商品名称</th>
+                            <th>付款时间</th>
+                            <th>收款方式</th>
+                            <th>收款金额</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 10, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 50, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+    var json = [
+        { "name": "ljp",  "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"},  
+        { "name": "ljp1", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"未开发票"},
+        { "name": "ljp2", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"},
+        { "name": "ljp3", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"未开发票"},
+        { "name": "ljp4",  "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"}
+    ];
+    //订单管理--所有订单信息
+    getTableData()
+    function getTableData() {
+        var tableInfo = ""
+        for (var i in json) {    //遍历Table的所有Row
+            tableInfo += `<tr>
+                <td>${json[i].name}</td>
+                <td>${json[i].Application_time}</td>
+                <td>${json[i].order_price}</td>
+                <td>${json[i].apply_amount}</td>
+                <td>${json[i].Invoice_status}</td>
+                <td class='finance_btn'>
+                    <button data-id='invoiceDetails' class='details' type="button">查看详情</button>
+                </td>
+            </tr>`;
+        }
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+
+
+
+</script>

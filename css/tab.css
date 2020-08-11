@@ -197,7 +197,12 @@ td {
     width: 220px;
     height: 30px;
     outline: none;
+    color: #666;
+    cursor: default;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
 }
+
 .detail_content a{
     position: absolute;
     top: 11px;
@@ -445,6 +450,16 @@ td {
     width: 34px;
     height: 14px;
     vertical-align:-2px;
+}
+.invoiceSub{
+    width: 120px;
+	height: 35px;
+    background-color: #ec6c32;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    border: none;
 }
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{

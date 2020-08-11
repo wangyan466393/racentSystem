@@ -4,7 +4,7 @@ $(function () {
         var sId = $(this).data("id");  //获取data-id的值
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
-        $(".nav>ul>li[data-id='"+sId+"']").addClass('active').siblings().removeClass('active');
+        $(".nav li[data-id='"+sId+"']").parent().parent().addClass('active').siblings().removeClass('active');
     });
      //导航
     $(".nav").on("click", "li", function (e) {
@@ -12,8 +12,11 @@ $(function () {
         e.stopPropagation();    //  阻止事件冒泡
         var sId = $(this).data("id");  //获取data-id的值
         window.location.hash = sId;  //设置锚点
-        loadInner(sId);  
-        $(this).addClass('active').siblings().removeClass('active');
+        loadInner(sId); 
+        $('li').removeClass('active'); 
+        $(this).addClass('active');
+        $(this).parent().parent().addClass('active');
+        
     });
     //订单详情
     $(".right_content").on("click", "#order_dataLists a", function (e) {
@@ -59,9 +62,14 @@ $(function () {
             //客户支持
             case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
             case "#createEmail": pathn = "createEmail.html"; i=null;break;
-            // 财务管理
-            case "#invoiceControl": pathn = "invoiceControl.html";i=1; break;
-            case "#invoiceDetails": pathn = "invoiceDetails.html";i=2; break;
+            // 财务管理 - 发票管理
+            case "#invoiceControl": pathn = "invoiceControl.html";i=3; break;
+            case "#invoiceDetails": pathn = "invoiceDetails.html"; break;
+            case "#invoiceInformation": pathn = "invoiceInformation.html"; break;
+            case "#invoiceMailingInformation": pathn = "invoiceMailingInformation.html"; break;
+            
+            // 财务管理 - 流水记录
+            case "#runningRecord": pathn = "runningRecord.html";i=2; break;
            //商品管理
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
 
