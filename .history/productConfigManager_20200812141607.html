@@ -1,0 +1,77 @@
+<div id="content_box">
+    <h2>可配置项列表</h2>
+    <div style="margin-top: 15px;">
+        <span>可配置选项允许您为产品提供附加组件和自定义选项</span>
+    </div>
+    <div id="content">
+        <div id="order_all">
+            <div class="table_box">
+                <table id="config_dataLists">
+                    <thead>
+                        <tr>
+                            <th>编码</th>
+                            <th>名称</th>
+                            <th>描述</th>
+                            <th>分类</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sectigo-positive-multi-domain-san</td>
+                            <td>PositiveSSL DV多域名证书 SAN</td>
+                            <td> - </td>
+                            <td>SSL SAN</td>
+                            <td>
+                                <a href="#" data-id="configurableDetail" class="config_detail_btn"><img src='images/alert_file.png'></a>
+                                <a href="#"><img src='images/delete.png'></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="import_btn">添加可配置项</button>
+            </div>
+            <div class="page">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 5, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 25, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+
+    getProductListsData();
+    function getProductListsData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += `
+            <tr>
+                            <td>sectigo-positive-multi-domain-san</td>
+                            <td>PositiveSSL DV多域名证书 SAN</td>
+                            <td> - </td>
+                            <td>SSL SAN</td>
+                            <td> 
+                                <a href=""><img src='images/alert_file.png'></a> 
+                                <a href="#"><img src='images/delete.png'></a>
+                            </td>
+                        </tr>
+            `
+        }
+        $(".right_content #config_dataLists tbody").append(tableInfo)
+    }
+</script>

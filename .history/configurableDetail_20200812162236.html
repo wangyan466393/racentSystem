@@ -1,0 +1,119 @@
+<div id="content_box">
+    <h2>可配置项详情</h2>
+<div class="config_box">
+    <div class="config_content">
+        <ul>
+            <li>
+                
+                <p>
+                    <span>编码</span><input type="text" class="config_inp">
+                </p>
+                <p>
+                    <span>配置项分类</span>
+                    <select name="" id="" class="config_inp">
+                        <option value=""></option>
+                    </select>
+                </p>
+            </li>
+            <li>
+                
+                <p>
+                    <span>名称</span><input type="text" class="config_inp">
+                </p>
+                <p>
+                    <span>价格</span><input type="number" class="config_inp">
+                </p>
+            </li>
+            <li>
+                
+                <p>
+                    <span>税率</span><input type="number" class="config_inp">
+                </p>
+                <p>
+                    <span>最小数量</span><input type="number" class="config_inp">
+                </p>
+            </li>
+            <li>
+                
+                <p>
+                    <span>最大数量</span><input type="number" class="config_inp">
+                </p>
+            </li>
+            <li>
+               <p> <span>产品简介</span></p>
+               <div class="intro_box">
+
+               
+                <ul class="intro">
+                    <li>
+                        <input type="checkbox"><label for="">Plesk Web Pro VPS版</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">WHMCS Plus</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">WHMCS Plus</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                    </li>
+                    <li>
+                        <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li>
+                <p><span>附加选项</span></p>
+                <div class="input_group">
+                    <span class="input-group-addon">is_normal:</span>        
+                    <input type="text" class="form-control">
+                </div>
+               
+                    <div class="input_group">
+                        <span class="input-group-addon">is_wildcard::</span>        
+                        <input type="text" class="form-control">
+                    </div>
+                
+            </li>
+            <li>
+               <p> <span>描述</span></p>
+                <div class="e_content" style="width: 100%;min-height: 150px;">
+                    <p>
+                        Apple和Google在行业内提出对证书有效期的新要求，表示旗下浏览器将于2020年8月30日24点之后不再信任颁发的两年有
+                    </p>
+                </div>
+            </li>
+        
+        </ul>
+    </div>
+</div>
+</div>
+<div class="email_back_btn">
+    <button type="button">修改</button>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    getProductListsData();
+    function getProductListsData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += `
+            <li>
+                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+            </li>
+            `
+        }
+        $(".right_content .intro").append(tableInfo)
+    }
+</script>
