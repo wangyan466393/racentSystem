@@ -116,7 +116,7 @@ td {
     outline: none;
 }
 
-.order_search button , .email_back_btn button , .import_btn , .export_btn {
+.order_search button , .email_back_btn button {
     padding: 5px 35px;
     color: #fff;
     border: none;

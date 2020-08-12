@@ -38,17 +38,16 @@
                             <td>¥302.00 </td>
                             <td>最新价</td>
                             <td> 
-                                <a href="">修改</a> |
-                                <a href="#" class="check_email">修改价格</a>|
-                                <a href="#"><img src='images/delete.png'></a>
+                                <a href="">预览</a> |
+                                <a href="#" data-id="emailDetail" class="check_email">查看邮件</a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div style="margin-top: 20px;">
-                <button class="import_btn">导入价格</button>
-                <button class="export_btn">导出价格</button>
+            <div>
+                <button class="addUser_btn">导入价格</button>
+                <button class="addUser_btn">导出价格</button>
             </div>
             <div class="page">
     
@@ -79,18 +78,14 @@
         var tableInfo = ""
         for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
             tableInfo +=`
-            <tr>
-                            <td>Plesk Web Host物理机版</td>
-                            <td>控制面板</td>
-                            <td>Plesk</td>
-                            <td>¥302.00 </td>
-                            <td>最新价</td>
-                            <td> 
-                                <a href="">修改</a> |
-                                <a href="#" class="check_email">修改价格</a>|
-                                <a href="#"><img src='images/delete.png'></a>
-                            </td>
-                        </tr>
+                <tr>
+                    <td>lijianpeng</td>
+                    <td>516805886@qq.com</td>
+                    <td>李建鹏</td>
+                    <td>18611770334</td>
+                    <td>racent.com</td>
+                    <td> <a data-id='customerData'>查看详情</a></td>
+                </tr>
             ` 
         }
         $(".right_content #product_dataLists tbody").append(tableInfo)

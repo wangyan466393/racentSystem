@@ -42,7 +42,7 @@ $(function () {
         window.location.hash = sId;  //设置锚点
         loadInner(sId);
     });
-    //邮件管理-新建和详情
+    //邮件管理
     $(".right_content").on({
         click:function(e){
             e.preventDefault();
@@ -75,7 +75,7 @@ $(function () {
             case "#runningRecord": pathn = "runningRecord.html";i=2; break;
            //商品管理
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
-           case "#configManager": pathn = "productConfigManager.html";i=6; break;
+
            default: pathn = "orderManagement.html";  break;
         }
         $(".right_content").load(pathn); //加载相对应的内容

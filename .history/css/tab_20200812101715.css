@@ -116,7 +116,7 @@ td {
     outline: none;
 }
 
-.order_search button , .email_back_btn button , .import_btn , .export_btn {
+.order_search button , .email_back_btn button {
     padding: 5px 35px;
     color: #fff;
     border: none;
@@ -247,7 +247,7 @@ td {
 .customer_listdata #customer_dataLists td:last-child a{
     color: #ec6c32;
 }
-#content #customer_dataLists td,#email_dataLists td , #product_dataLists td{
+#content #customer_dataLists td,#email_dataLists td{
     border: 1px solid#e6e6e6;
 }
 #customer_dataLists tbody td:first-child{
@@ -577,9 +577,7 @@ td {
     outline: none;
     cursor: pointer;
 }
-#email_dataLists tbody a:first-child ,
-#product_dataLists tbody a:first-child
-{
+#email_dataLists tbody a:first-child{
     color: #ec6c32;
 }
 /* ******新建邮件********* */
@@ -674,10 +672,4 @@ td {
     width: 100%;
     border: 1px solid #e6e6e6;
     background-color: #f6f6f6;
-}
-
-/* ******************商品管理********************************* */
-#product_dataLists img{
-    position: relative;
-    top:3px;
 }
