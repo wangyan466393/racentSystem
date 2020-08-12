@@ -192,7 +192,7 @@ td {
     width: 50px;
     text-align: right;
 }
-.detail_content input{
+.detail_content input , .level_content input{
     width: 220px;
     height: 30px;
     outline: none;
@@ -247,7 +247,9 @@ td {
 .customer_listdata #customer_dataLists td:last-child a{
     color: #ec6c32;
 }
-#content #customer_dataLists td,#email_dataLists td , #product_dataLists td{
+#content #customer_dataLists td,#email_dataLists td , #product_dataLists td,
+#config_dataLists td
+{
     border: 1px solid#e6e6e6;
 }
 #customer_dataLists tbody td:first-child{
@@ -544,9 +546,11 @@ td {
     display: none;
     margin-top: 30px;
 }
+.personal_box_btn button{
+    margin-right: 10px;
+}
 .personal_box_btn button , .submit_email_btn button{
     padding: 8px 30px;
-    margin-right: 10px;
     border: none;
     color:#fff;
 }
@@ -614,6 +618,7 @@ td {
 }
 .edit_box{
     background-color: #fff;
+    padding-bottom: 10px;
 }
 .edit_box > h3 {
     padding: 10px;
@@ -625,11 +630,11 @@ td {
     width: 80%;
     box-sizing: border-box;
 }
-.edit_content>ul > li{
+.edit_content>ul > li , .config_content >ul > li , .price_content >ul > li{
     display: flex;justify-content: space-between;
     margin-bottom: 20px;
 }
-.edit_content input{
+.edit_content input , .config_content p >input , select.config_inp , .price_content p >input{
     height: 30px;
     border: 1px solid #ccc;
     background-color: #f6f6f6;
@@ -681,6 +686,7 @@ td {
     white-space: nowrap;
 }
 .submit_email_btn{
+    margin-top: 20px;
     text-align: right;
 }
 /* **********邮件详情************* */
@@ -692,7 +698,78 @@ td {
 }
 
 /* ******************商品管理********************************* */
-#product_dataLists img{
+#product_dataLists img , #config_dataLists img{
     position: relative;
     top:3px;
+}
+/* 可配置项 */
+.config_content , .price_content {
+    margin-top: 20px;
+    width: 95%;
+    box-sizing: border-box;
+}
+.config_content p > span , .price_content p > span{
+    display: inline-block;
+    width: 65px;
+    text-align: right;
+    margin-right: 10px;
+}
+.config_inp{
+    width: 350px;
+}
+.intro_box{
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+}
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.intro li{
+    width: 50%;
+    padding-left: 50px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.input_group{
+    position: relative;
+    display: table;
+    margin-right: 20px;
+    border-collapse: separate;
+}
+.input-group-addon
+{
+    padding: 6px 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    width: 1%;
+    border: 1px solid #e6e6e6;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    border-right: 0;
+}
+.form-control
+{
+    position: relative;
+    z-index: 2;
+    float: left;
+    padding-left: 10px;
+    width: 267px;
+    margin-bottom: 0;
+    height: 32px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
+    display: table-cell;
+}
+.description{
+    width: 100%;
+    min-height: 150px;
 }

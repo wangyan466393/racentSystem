@@ -1,0 +1,705 @@
+/* tab切换样式 */
+#tab {
+    margin-top: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#tab li {
+    margin-right: 10px;
+    list-style: none;
+    float: left;
+    width: 100px;
+    text-align: center;
+    background-color: #e5f0ff;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#tab li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+#tab li.active {
+    background-color: #fff;
+    border-bottom: none;
+}
+#content_box {
+    background-color: #fff;
+    padding: 10px 15px 30px 15px;
+    margin-bottom: 20px;
+}
+#content_box > h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#content {
+    margin-top: 20px;
+    height: 100%;
+}
+
+#content>div {
+    
+    width: 100%;
+    display: none;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#content #order_all {
+    display: block;
+}
+
+#content table {
+    width: 100%;
+    text-align: center;
+}
+
+#content table,
+td {
+    padding: 5px 0;
+    border-collapse: collapse;
+}
+#content #order_dataLists tbody td
+{
+    border-bottom: 1px solid #e6e6e6;
+}
+#content .table_box table thead tr {
+    padding: 8px 0;
+    background-color: #e5f0ff;
+}
+
+#content table th {
+    padding: 10px 0;
+}
+
+#content .table_box #order_dataLists td:nth-child(2) {
+    color: #ec6c32;
+}
+
+#content table a {
+    color: #5d96e3;
+    cursor: pointer;
+}
+
+/* ***********************销售管理-订单管理 **********************************/
+.order_search {
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+.order_search span{
+    margin-right: 10px;
+}
+.order_search span select{
+    padding-left: 10px;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+.order_search span input {
+    padding-left: 10px;
+    width: 200px;
+    height: 39px;
+    border: none;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+.order_search button , .email_back_btn button , .import_btn , .export_btn {
+    padding: 5px 35px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    height: 39px;
+    outline: none;
+    cursor: pointer;
+}
+.order_search button:hover{
+    background-color: #f58d5d;
+}
+.checkall_btn button{
+    padding: 0px 26px;
+    margin-left: 15px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    height: 26px;
+    outline: none;
+    cursor: pointer;
+}
+#order_dataLists input[type="checkbox"]{
+    width:13px;height:13px;
+    display: inline-block;
+    text-align: center;
+     line-height: 18px;position: relative;}
+#order_dataLists input[type="checkbox"]::before{
+    content: "";
+    position: absolute;top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #d9d9d9}
+#order_dataLists input[type="checkbox"]:checked::before{
+    content: "\2713";
+    background-color: #fff;
+    position: absolute;top: 0;left: 0;
+    width: 100%;
+    border: 1px solid #e50232;color:#e50232;font-size: 14px;font-weight: bold;}
+
+/* *********************订阅管理*************************** */
+#content #subscription_dataLists td{
+    border: 1px solid#e6e6e6;
+}
+#subscription_dataLists tbody td:last-child{
+    padding-top: 6px;
+}
+#subscription_dataLists tbody td:first-child{
+    color: #ec6c32;
+}
+
+/* ************************销售管理-订单详情 *************************/
+.detail_title{
+    color: #ec6c32;
+}
+.detail_content table
+{
+    border-collapse: separate !important;
+    border-spacing: 0px 30px;
+}
+.detail_content table tr td:nth-child(2n){
+    position: relative;
+    padding-right:3em ;
+}
+.detail_content table td:nth-child(2n-1){
+    padding-right: 10px;
+    width: 60px;
+    text-align: right;
+}
+.detail_content label{
+    display: inline-block;
+    margin-right: 10px;
+    width: 50px;
+    text-align: right;
+}
+.detail_content input{
+    width: 220px;
+    height: 30px;
+    outline: none;
+    color: #666;
+    cursor: default;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
+}
+
+.detail_content a{
+    position: absolute;
+    top: 11px;
+    right: 4em;
+    color: #97b0ea;
+}
+.handle_order{
+    overflow: hidden;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #e4f0fe;
+}
+.handle_order p:first-child{
+    float: left;
+    margin-left: 50px;
+    font-size: 16px;
+    line-height: 35px;
+    
+}
+.handle_order p:last-child{
+    float: right;
+}
+.handle_order button{
+    width: 90px;
+    height: 36px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit_btn{
+    background-color: #ec6c32;
+    color: #fff;
+}
+.del_btn{
+    margin-right: 50px;
+    margin-left: 10px;
+    background-color: #fff;
+}
+/* ******************客户资料-客户列表********************************************* */
+.customer_listdata #customer_dataLists td:last-child a{
+    color: #ec6c32;
+}
+#content #customer_dataLists td,#email_dataLists td , #product_dataLists td,
+#config_dataLists td
+{
+    border: 1px solid#e6e6e6;
+}
+#customer_dataLists tbody td:first-child{
+    color: #ec6c32;
+}
+.addUser_btn{
+    margin-top: 20px;
+    padding: 5px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    border-radius: 17px;
+    outline: none;
+    cursor: pointer;
+}
+/******************* 客户资料-产品服务 *************************************/
+.customer_info .product_serve{
+    margin-bottom: 20px;
+}
+.customer_info .product_serve h2{
+    position: relative;
+    padding: 10px 20px;
+    background-color: #e5f0ff;
+}
+.customer_info .product_serve h2 button{
+   float: right;
+    padding: 5px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    border-radius: 17px;
+    outline: none;
+    cursor: pointer;
+}
+.customer_info .product_serve .product_box{
+    padding: 15px 15px 0px 15px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+}
+.customer_info .product_serve .product_box table, .product_box table td{
+    border: none;
+}
+.customer_info .product_serve .product_box thead tr{
+    background-color: #f2f5fc;
+}
+.customer_info .product_serve .product_box tbody tr{
+    border-bottom: 1px solid #e6e6e6;
+}
+.customer_info .product_serve .product_box tbody tr:hover{
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+.customer_info .product_serve .product_box tbody tr:last-child{
+    border: none;
+}
+
+.customer_info .product_serve .product_box tbody td:first-child{
+    color: #ec6c32;
+}
+/* *********************客户资料-用户信息 ********************************/
+.user_info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.user_info>div{
+    width: 32%;
+}
+
+.customer_info #content  .user_info table{
+    text-align: left;
+    border: 1px solid #e6e6e6;
+}
+.user_info p{
+    margin-top: 15px;
+}
+.customer_info .user_info tr{
+    height: 35px;
+}
+.user_info td{
+    border: none;
+}
+.user_info .other_info td:first-child{
+    width: 80px;
+    padding-left:20px ;
+}
+.other_info span{
+    display: block;
+    margin-bottom: 6px;
+}
+.bill_info td:first-child{
+    width: 120px;
+    padding-left:20px ;
+}
+.user_info caption{
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #e5f0ff;
+}
+.user_info tr:nth-child(2n){
+    background-color: #f6f6f6;
+}
+.user_info a{
+    padding-left: 25px;
+}
+.shopp a{
+    background: url(../images/shopp_cart_01.png) no-repeat left center;
+}
+
+.renew a{
+    background: url(../images/renew_01.png) no-repeat left center;
+}
+.remaining a{
+    background: url(../images/remaining_01.png) no-repeat left center;
+}
+.pay a{
+    background: url(../images/pay_01.png) no-repeat left center;
+}
+.shopp a:hover{
+    background: url(../images/shopp_cart.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.renew a:hover{
+    background: url(../images/renew_02.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.remaining a:hover{
+    background: url(../images/remaining_02.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+.pay a:hover{
+    background: url(../images/pay_02.png) no-repeat left center;
+    color:#ec6c32 !important;
+}
+
+/* ********************客户资料-修改等级****************************************** */
+.level_content table{
+    border-collapse: separate !important;
+    border-spacing: 0px 30px;
+}
+.level_content table td:nth-child(2n-1){
+    padding-right: 10px;
+    width: 73px;
+    text-align: right;
+}
+.level_content table td:nth-child(2n){
+    text-align: left;
+}
+.level_content input{
+    width: 220px;
+    height: 30px;
+    outline: none;
+}
+#virtual_key{
+    position: relative;
+}
+.level_content a{
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    width: 17px;
+    height: 11px;
+    background: url(../images/keyboard.png) no-repeat left;
+}
+.level_box{
+    display: none;
+    margin-top: 30px;
+    float: right;
+}
+.level_box button{
+    width: 90px;
+    height: 36px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 财务管理  - 发票列表 */
+.finance-search>select{
+    width: 173px;
+	height: 40px;
+	background-color: #ffffff;
+    border: solid 1px #e5e5e5;
+    font-size: 14px;
+    color: #999;
+    text-indent: 8px;
+}
+.finance-search>button{
+    width: 106px;
+	height: 40px;
+    background-color: #ec6c32;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+}
+.detailCheck input{
+    width: 34px;
+    height: 14px;
+    vertical-align:-2px;
+}
+.invoiceSub{
+    width: 120px;
+	height: 35px;
+    background-color: #ec6c32;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+/* *******************客户资料-交易记录**************************************** */
+.finance_btn button{
+    margin-left: 12px;
+    color: #333;
+    border: none;
+    background-color: #d9d9d9;
+    height: 26px;
+    width: 94px;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.finance_btn .details{
+    background-color: #ec6c32;
+    color: #fff;
+}
+/* *******************交易记录**************************************** */
+.table_datastyle  tbody tr{
+    border-bottom: 1px solid #e6e6e6;
+}
+.table_datastyle  tbody tr:hover{
+    background-color:#f6f6f6 ;
+}
+.table_datastyle tbody button{
+    padding-left: 6px;
+    padding-right: 6px;
+    border: none;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    height: 24px;
+    border-radius: 5px;
+}
+.table_datastyle tbody input{
+    margin-right: 5px;
+    height: 24px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+/* **********************客户资料-个人资料******************************************* */
+.personal_data{
+    width: 48%;
+    background-color:#f6faff ;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+}
+.personal_data td:first-child{
+    text-align: right;
+    width: 90px;
+}
+.personal_data td:last-child{
+    text-align: left;
+}
+.personal_data input{
+    width: 58%;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+#content .personal_data table
+{
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+ .personal_box_btn{
+    display: none;
+    margin-top: 30px;
+}
+.personal_box_btn button , .submit_email_btn button{
+    padding: 8px 30px;
+    margin-right: 10px;
+    border: none;
+    color:#fff;
+}
+.personal_box_btn .personal_savebtn , .submit_audit{
+    background-color: #ec6c32;
+}
+.personal_box_btn .personal_canelbtn , .preview_email{
+    background-color: #999999;
+}
+/* ***********************客户资料-账单********************************************* */
+#content .bill .bill_inp{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+}
+.bill .bill_inp li{
+    margin: 20px 0;
+}
+.bill .bill_inp li:first-child span{
+    margin-right: 30px;
+}
+.bill .bill_inp input,.bill .bill_inp select{
+    width: 230px;
+    height: 30px;
+    border: 1px solid #d9d9d9;
+}
+.bill .bill_inp button{
+    padding: 6px 40px;
+    background-color: #ec6c32;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+}
+
+/* *****************客服支持-邮件管理********************************* */
+.email_btn{
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    background-color: #ec6c32;
+    outline: none;
+    cursor: pointer;
+}
+#email_dataLists tbody a:first-child ,
+#product_dataLists tbody a:first-child
+{
+    color: #ec6c32;
+}
+/* ******新建邮件********* */
+.createEmail_box input{
+    height: 28px;
+    width: calc( 100% - 54px );
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+}
+.createEmail_box label ,.createEmail_box input{
+    display: inline-block;
+    
+}
+.createEmail_box .email_content li{
+    white-space: nowrap;
+    width: 30%;
+}
+.edit_box{
+    background-color: #fff;
+}
+.edit_box > h3 {
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.edit_content {
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 80%;
+    box-sizing: border-box;
+}
+.edit_content>ul > li , .config_content >ul > li{
+    display: flex;justify-content: space-between;
+    margin-bottom: 20px;
+}
+.edit_content input , .config_content input , select.config_inp{
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+}
+.edit_content span{
+    display: inline-block;
+    width: 50px;
+}
+.edit_content .sender{
+    width: 260px;
+}
+.edit_content .domain_name{
+    width: 200px;
+}
+.edit_content .attn{
+    width: 100%;
+    height: 200px;
+}
+.edit_content .theme{
+    width: 100%;
+}
+.upload-label{
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ec6c32;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+.file-upload{display: none;}
+.file_view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.file_view li{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 318px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e6e6e6;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.submit_email_btn{
+    text-align: right;
+}
+/* **********邮件详情************* */
+.e_content{
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    background-color: #f6f6f6;
+}
+
+/* ******************商品管理********************************* */
+#product_dataLists img , #config_dataLists img{
+    position: relative;
+    top:3px;
+}
+/* 可配置项 */
+.config_content {
+    margin-top: 20px;
+    width: 95%;
+    box-sizing: border-box;
+}
+.config_content span{
+    display: inline-block;
+    width: 65px;
+    text-align: right;
+    margin-right: 10px;
+}
+.config_inp{
+    width: 350px;
+}
+.intro{
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #f6f6f6;
+}
