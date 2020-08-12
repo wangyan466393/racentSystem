@@ -58,11 +58,11 @@
         }
     });
     var json = [
-        { "name": "ljp",  "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"},  
-        { "name": "ljp1", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"未开发票"},
-        { "name": "ljp2", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"},
-        { "name": "ljp3", "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"未开发票"},
-        { "name": "ljp4",  "userEmail": "bg12@163.com", "billNum": "2563.90", "apply_amount": "2567.00","Invoice_status":"已开发票"}
+        { "name": "ljp",  "user_email": "bg12@163.com", "bill_num": "2600001263537839320093746", "trade_name": "dig EV LLS证书","payment_time":"2020-08-10 10:00:00","payment_method":"零钱支付","payment_money":398.00},  
+        { "name": "ljp1", "user_email": "bg12@163.com", "bill_num": "2600001263537839320093746", "trade_name": "dig EV LLS证书","payment_time":"2020-08-10 10:00:00","payment_method":"零钱支付","payment_money":398.00},
+        { "name": "ljp2", "user_email": "bg12@163.com", "bill_num": "2600001263537839320093746", "trade_name": "dig EV LLS证书","payment_time":"2020-08-10 10:00:00","payment_method":"零钱支付","payment_money":398.00},
+        { "name": "ljp3", "user_email": "bg12@163.com", "bill_num": "2600001263537839320093746", "trade_name": "dig EV LLS证书","payment_time":"2020-08-10 10:00:00","payment_method":"零钱支付","payment_money":398.00},
+        { "name": "ljp4",  "user_email": "bg12@163.com", "bill_num": "2600001263537839320093746", "trade_name": "dig EV LLS证书","payment_time":"2020-08-10 10:00:00","payment_method":"零钱支付","payment_money":398.00}
     ];
     //订单管理--所有订单信息
     getTableData()
@@ -71,12 +71,15 @@
         for (var i in json) {    //遍历Table的所有Row
             tableInfo += `<tr>
                 <td>${json[i].name}</td>
-                <td>${json[i].Application_time}</td>
-                <td>${json[i].order_price}</td>
-                <td>${json[i].apply_amount}</td>
-                <td>${json[i].Invoice_status}</td>
-                <td class='finance_btn'>
-                    <button data-id='invoiceDetails' class='details' type="button">查看详情</button>
+                <td>${json[i].user_email}</td>
+                <td>${json[i].bill_num}</td>
+                <td>${json[i].trade_name}</td>
+                <td>${json[i].payment_time}</td>
+                <td>${json[i].payment_method}</td>
+                <td>￥${json[i].payment_money}</td>
+                <td>
+                    <img src=''>
+                    <img src='images/delete.png'/>
                 </td>
             </tr>`;
         }
