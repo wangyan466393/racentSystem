@@ -428,6 +428,13 @@ td {
 }
 
 /* 财务管理  - 发票列表 */
+.addCollection{
+    margin: 30px 0;
+}
+#content .pageFloat{
+    float:right;
+    width:80%;
+}
 .finance-search>select{
     width: 173px;
 	height: 40px;
@@ -459,6 +466,14 @@ td {
     outline: none;
     cursor: pointer;
     border: none;
+}
+/* 财务管理 - 收款记录 */
+.remittanceNotes{
+    width: 200px;
+	height: 28px;
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	border: solid 1px #d9d9d9;
 }
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{

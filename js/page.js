@@ -22,12 +22,13 @@ create: function() {
             <div class="updown page_down">下一页</div>
             <div class=" hometrailer page_trailer">尾页</div>
         </div>
-        <div class="page_footer">
+        
+    </div>`;
+    /*<div class="page_footer">
             <input type="text" class="page_input" />
             <span>页</span>
             <span class="page_btn">跳转</span>
-        </div>
-    </div>`;
+        </div>*/
     $(this.settings.container).append(_template);
     this.refreshDom(this.settings);
     this.bindEvent();

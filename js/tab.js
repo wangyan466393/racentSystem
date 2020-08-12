@@ -50,7 +50,7 @@ $(function () {
             window.location.hash = sId;  
             loadInner(sId);
         },
-    },".email_btn , .check_email");
+    },".email_btn , .check_email ,.flowDetailHref");
     function loadInner(sId) {
         var sId = window.location.hash;
         var pathn, i;
@@ -65,6 +65,10 @@ $(function () {
             case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
             case "#createEmail": pathn = "createEmail.html"; i=null;break;   //新建邮件
             case "#emailDetail": pathn = "emailDetail.html"; i=null;break;  //邮件详情
+            // 客户支持 -工单管理
+            case "#workOrder": pathn = "workOrder.html"; i=4;break;  
+            case "#workOrderDetail": pathn = "workOrderDetail.html";break;  
+
             // 财务管理 - 发票管理
             case "#invoiceControl": pathn = "invoiceControl.html";i=3; break;
             case "#invoiceDetails": pathn = "invoiceDetails.html"; break;
@@ -73,6 +77,9 @@ $(function () {
             
             // 财务管理 - 流水记录
             case "#runningRecord": pathn = "runningRecord.html";i=2; break;
+            case "#flowDetail": pathn = "flowDetail.html"; break;
+            // 财务管理 - 收款记录
+            case "#collectionRecords": pathn = "collectionRecords.html";i=1; break;
            //商品管理
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;
            case "#configManager": pathn = "productConfigManager.html";i=6; break;

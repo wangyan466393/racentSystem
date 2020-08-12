@@ -1,0 +1,110 @@
+<div id="content_box">
+    <h2>工单列表</h2>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="">
+                        <option value="">选择类型</option>
+                    </select>
+
+                </span>
+                <span>
+                    <input type="text" placeholder="请输出用户名" id="order_username" style="width: 150px;">
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="">选择相关产品</option>
+                    </select>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="">选择部门</option>
+                    </select>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="">选择优先级</option>
+                    </select>
+                </span>
+                <div style="margin-top:20px;"></div>
+                <span>
+                    <input style="width:670px;" type="text" placeholder="问题描述">
+                </span>
+                <span>
+                    <button type=" button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="subscription_dataLists">
+                    <thead>
+                        <tr>
+                            <th>最近更新时间</th>
+                            <th>主题</th>
+                            <th>提问用户名</th>
+                            <th>部门</th>
+                            <th>优先级</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 10, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 50, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+    var json = [
+        { "theme": "关于Plesk", "ask_user": "ljp", "department": "超级管理员", "priority": "低", "status": "已回答", "update_time": "2020-08-10 10:00:00", "payment_money": 398.00 },
+        { "theme": "CA订单号：364085580", "ask_user": "ljp", "department": "超级管理员", "priority": "低", "status": "已回答", "update_time": "2020-08-10 10:00:00", "payment_money": 398.00 },
+        { "theme": "订单200622uag8qpzbgk 有个域名 写错", "ask_user": "ljp", "department": "超级管理员", "priority": "低", "status": "已回答", "update_time": "2020-08-10 10:00:00", "payment_money": 398.00 },
+        { "theme": "证书安装", "ask_user": "ljp", "department": "超级管理员", "priority": "低", "status": "已回答", "update_time": "2020-08-10 10:00:00", "payment_money": 398.00 },
+        { "theme": "请求https证书过期，怎么处理", "ask_user": "ljp", "department": "超级管理员", "priority": "低", "status": "已回答", "update_time": "2020-08-10 10:00:00", "payment_money": 398.00 }
+    ];
+    //订单管理--所有订单信息
+    getTableData()
+    function getTableData() {
+        var tableInfo = ""
+        for (var i in json) {    //遍历Table的所有Row
+            tableInfo += `<tr>
+                <td>${json[i].update_time}</td>
+                <td>${json[i].theme}</td>
+                <td>${json[i].ask_user}</td>
+                <td>${json[i].department}</td>
+                <td>${json[i].priority}</td>
+                <td>${json[i].status}</td>
+                <td>
+                    <a class='flowDetailHref' data-id='workOrderDetail'><img src='images/alert_file.png'></a>
+                    &nbsp;&nbsp;
+                    <a><img src='images/delete.png'/></a>
+                </td>
+            </tr>`;
+        }
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+
+
+
+</script>
