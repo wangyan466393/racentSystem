@@ -1,0 +1,95 @@
+<div id="content_box" class="customer_listdata">
+    <h2>客户列表</h2>
+    <div id="content">
+        <div id="order_all"  class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="">
+                        <option value="">请选择用户等级</option>
+                        <option value="">普通级</option>
+                        <option value="">白银级</option>
+                    </select>
+                </span>
+                <span>
+                    <select name="" id="">
+                        <option value="">请选择客户经理</option>
+                        <option value="">普通级</option>
+                        <option value="">白银级</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入用户名或邮箱或手机号" class="am_inp">
+                </span>
+                <span>
+                    <button type="button">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="customer_dataLists" >
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>邮箱</th>
+                            <th>姓名</th>
+                            <th>手机号</th>
+                            <th>域名信息</th>
+                            <th>客户等级</th>
+                            <th>客户经理</th>
+                            <th>开票类型</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button class="addUser_btn">添加客户</button>
+            </div>
+            <div class="page">
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 5, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 25, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+
+    getUserListsData();
+    function getUserListsData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo +=`
+                <tr>
+                    <td>lijianpeng</td>
+                    <td>516805886@qq.com</td>
+                    <td>李建鹏</td>
+                    <td>18611770334</td>
+                    <td>racent.com</td>
+                    <td>测试等级</td>
+                    <td>li</td>
+                    <td>充值结算</td>
+                    <td>已激活</td>
+                    <td> <a data-id='customerData'>查看详情</a></td>
+                </tr>
+            ` 
+        }
+        $(".right_content .customer_listdata tbody").append(tableInfo)
+    }
+</script>

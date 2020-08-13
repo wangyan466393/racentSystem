@@ -1,0 +1,106 @@
+<div id="content_box">
+    <h2>价格设置</h2>
+<div class="config_box">
+    <div class="price_content">
+        <ul>
+            <li>  
+                <p>
+                    <span>选择币种</span>
+                    <select name="" id="" class="config_inp">
+                        <option value=""></option>
+                    </select>
+                </p>
+                <p>
+                    <span>预警价</span><input type="text" class="config_inp">
+                </p>
+            </li>
+            <!-- <li> 
+                <p>
+                    <span>选择产品</span>
+                    <select name="" id="" class="config_inp">
+                        <option value=""></option>
+                    </select>
+                </p>
+            </li> -->
+           
+            <li>
+               <p> <span>设置价格</span></p>
+               <div class="priceData_box">
+                <table id="price_tabledata" class="price_tabledata">
+                    <thead>
+                        <tr>
+                            <th>会员等级/购买时间</th>
+                            <th>1个月</th>
+                            <th>2个月</th>
+                            <th>3个月</th>
+                            <th>1年</th>
+                            <th>2年</th>
+                            <th>3年</th>
+                            <th>4年</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1个月</td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="price_tabledata2" class="price_tabledata">
+                    <thead>
+                        <tr>
+                            <th>会员等级/购买时间</th>
+                            <th>Level-8 Level-T</th>
+                            <th>Level-9 Level-T2</th>
+                            <th>Level-10 Level-TS</th>
+                            <th>Level-11 UL01</th>
+                            <th>Level-12 Level-F1</th>
+                            <th>Level-13 NLevel-T</th>
+                            <th>Level-14 NLEVEL-T100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1个月</td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                            <td><button>305.00</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+</div>
+<div class="email_back_btn">
+    <button type="button">提交</button>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    getProductListsData();
+    function getProductListsData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += `
+            <li>
+                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+            </li>
+            `
+        }
+        $(".right_content .intro").append(tableInfo)
+    }
+</script>

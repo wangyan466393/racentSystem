@@ -1,0 +1,155 @@
+<div id="content_box">
+    <h2>订单列表</h2>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="sel_val">
+                        <option value="all">全部</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="text" placeholder="请输出用户名" id="order_username" style="width: 150px;">
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入订单号" id="order_number">
+                </span>
+                <span>
+                    <input type="date" value="付款日期"">
+            </span>
+            <span>
+                <button type=" button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="order_dataLists">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>用户名</th>
+                            <th>订单编号</th>
+                            <th>产品名称</th>
+                            <th>下单日期</th>
+                            <th>付款方式</th>
+                            <th>订单类型</th>
+                            <th>订单状态</th>
+                            <th>订单价格</th>
+                            <th>订单操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <tr class="checkall_btn">
+                            <td align="left" style="position: relative;">
+                                <input type="checkbox" id="check_all">
+                                <label for="check_all">全选</label>
+                            </td>
+                            <td align="left" colspan="4">
+                                <button type="button" id="batch_remove">批量删除</button>
+                                <button type="button">批量修改</button>
+                                <button type="button">新增订单</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    
+    var json = [
+        { "name": "ljp11", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },   //json[0]
+        { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+        { "name": "小李", "order_num": "202110803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+        { "name": "李四", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+        { "name": "张三", "order_num": "20210803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },
+    ];
+    //订单管理--所有订单信息
+    getTableData()
+    function getTableData() {
+        // debugger
+         // 分页
+         $.pageInit({
+            container: '.page', //容器：默认page
+            countPage: Math.ceil(json.length/2), //一共有多少页
+            showPageCount: (json.length/2), //显示多少个分页按钮
+            nowPage: 1, //当前是第几页
+            count: json.length, //数据总数
+            callBack: function (data) {
+                //当前的页码
+                console.log("当前的页码为：" + data)
+            }
+        });
+        var tableInfo = ""
+        for (var i = 0; i < json.length; i++) {    //遍历Table的所有Row
+            tableInfo += "<tr>"
+                + " <td align='left' ><input type='checkbox' name='Check[]' value='"+i+"'></td> "
+                + " <td class='name'>" + json[i].name + "</td> "
+                + "<td class='num'>" + json[i].order_num + "</td>"
+                + "<td>Sectigo EV代码签名</td>"
+                + "<td>2020-08-03 18:35:00</td>"
+                + "<td>零钱支付</td>"
+                + "<td>新</td>"
+                + "<td>草稿</td>"
+                + "<td>￥1299.60</td>"
+                + "<td><a data-id='orderDetail'>详情</a></td>  ";
+
+            tableInfo += "</tr>";
+        }
+        $(".right_content #order_dataLists tbody").html(tableInfo)
+    }
+
+    //全选
+    $("#check_all").on("click", function () {
+        $("#order_all input[type='checkbox']").prop("checked", this.checked);
+    });
+
+    //搜索
+    $("#order_search").click(function () {
+        var order_username = $("#order_username").val();   //用户名
+        var order_number = $("#order_number").val();  //订单编号
+        json = json.filter(item => {
+            if (order_username != "") {
+                return item.name.indexOf(order_username) !== -1 && item.order_num.indexOf(order_number) !== -1
+            }
+
+        })
+        getTableData()
+        // var sel_val = $("#sel_val").val();  
+        // if ($.trim(order_username) != "") {
+        //     $("table tbody tr").hide();
+        //     $("table tbody tr .name:contains('" + order_username + "')").parent().show();
+        // } 
+        // if ($.trim(order_number) != "") {
+        //     $("table tbody tr").hide();
+        //     $("table tbody tr .num:contains('" + order_number + "')").parent().show();
+        // }
+
+
+    });
+
+    //批量删除
+    $("#batch_remove").click(function () {
+        if (confirm('确定要删除所选吗?')) {
+            var checks = $("input[name='Check[]']:checked");
+            if (checks.length == 0) { alert('未选中任何项！'); return false; }
+            //将获取的值存入数组
+            var checkData = new Array();
+            checks.each(function () {
+                checkData.push($(this).val());
+            });
+            alert("选中要删除的id值为:" + checkData);
+            console.log("选中要删除的id值为:" + checkData);
+            //提交数据到后台进行删除
+        }
+    });
+</script>
