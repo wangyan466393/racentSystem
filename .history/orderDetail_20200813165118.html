@@ -1,0 +1,77 @@
+<div id="content_box">
+    <h2>订单详情</h2>
+    <div class="detail_content">
+        <table >
+            <tr>
+                <td>
+                    订单号
+                </td>
+                <td><input type="text" disabled></td>
+                <td>客户名</td>
+                <td><input type="text" disabled></td>
+                <td>付款方式</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>金额</td>
+                <td><input type="text" disabled></td>
+                <td>优惠码</td>
+                <td><input type="text" disabled></td>
+                <td>时间</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>推介</td>
+                <td><input type="text" disabled></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>订单项目</h2>
+        <div class="table_box">
+            <table class="order_project_table">
+                <thead>
+                    <tr>
+                        <th>订单类型</th>
+                        <th>订单名称</th>
+                        <th>付款周期</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SSL证书</td>
+                        <td>SSL证书-PositiveSSL DV SSL证书</td>
+                        <td>2年</td>
+                        <td><span>￥37.50</span></td>
+                        <td>申请中</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="handle_order">
+    <p>
+        总计：￥<span>3300.00</span>
+    </p>
+    <p>
+        <button type="button" class="edit_btn">修改订单</button>
+        <button type="button" class="del_btn">删除订单</button>
+    </p>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".detail_content table a").click(function(){
+        $(this).prev().removeAttr("disabled");
+        $(this).prev().focus()
+    })
+</script>

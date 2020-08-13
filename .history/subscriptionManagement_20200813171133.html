@@ -1,0 +1,96 @@
+<div id="content_box">
+    <h2>订阅列表</h2>
+<div id="content">
+    <div id="order_all"  class="order_content">
+        <div class="order_search">
+            <span>
+                <input type="text" placeholder="请输入用户名">
+            </span>
+            <span>
+                <select name="" id="">
+                    <option value="">请选择产品品牌</option>
+                </select>
+            </span>
+            <span>
+                <select name="" id="">
+                    <option value="">请选择产品品类</option>
+                </select>
+            </span>
+            <span>
+                <input type="text" placeholder="请输入客户经理">
+            </span>
+            <span>
+                <button type="button">搜索</button>
+            </span>
+        </div>
+        <div class="table_box">
+            <table id="subscription_dataLists" >
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>订单编号</th>
+                        <th>产品名称</th>
+                        <th>过期时间</th>
+                        <th>续费周期</th>
+                        <th>金额</th>
+                        <th>产品状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="page">
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 5, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 25, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+
+    //获取订阅管理-所有订单
+    var jsonSub = [
+        { "name": "ljp", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},   //json[0]
+        { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},
+        { "name": "ljp2", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年",  "order_price": "1229.60" ,"product_status":"申请中"},
+        { "name": "ljp3", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60","product_status":"申请中" },
+        { "name": "ljp4", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "past_date": new Date(), "renewal_cycle": "1年", "order_price": "1229.60" ,"product_status":"申请中"},
+    ];
+    getSubscriptionData()
+    function getSubscriptionData() {
+        var tableInfo = ""
+        for (var i = 0; i < jsonSub.length; i++) {    //遍历Table的所有Row
+            tableInfo += "<tr>"
+                //遍历Row中的每一列
+                //获取Table中单元格的内容
+                + " <td>" + jsonSub[i].name + "</td> "
+                + "<td>" + jsonSub[i].order_num + "</td>"
+                + "<td>" + jsonSub[i].product_name + "</td>"
+                + "<td>2020-08-03 18:35:00</td>"
+                + "<td>" + jsonSub[i].renewal_cycle + "</td>"
+                + "<td>" + jsonSub[i].order_price + "</td>"
+                + "<td>" + jsonSub[i].product_status + "</td>"
+                + "<td><a href='#'>查看明细</a></td>  ";
+
+            tableInfo += "</tr>";
+        }
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+</script>
