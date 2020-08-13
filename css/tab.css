@@ -202,6 +202,7 @@ td {
     cursor: default;
     background-color: #f6f6f6;
     border: 1px solid #e6e6e6;
+    text-indent: 8px;
 }
 
 .detail_content a{
@@ -479,6 +480,16 @@ td {
 	border-radius: 5px;
 	border: solid 1px #d9d9d9;
 }
+/* 客服支持 - 工单 */
+.messageTitle{
+    background-color: #e5f0ff;
+    margin-top: 10px;
+    height: 44px;
+}
+.messageTitle span{
+    margin: 0 10px;
+    line-height: 44px;
+}
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{
     margin-left: 12px;
@@ -715,12 +726,12 @@ td {
 }
 .config_content p > span , .price_content p > span{
     display: inline-block;
-    width: 75px;
+    width: 67px;
     text-align: right;
     margin-right: 10px;
 }
 .config_inp{
-    width: 350px;
+    width: 338px;
 }
 .intro_box{
     height: 200px;

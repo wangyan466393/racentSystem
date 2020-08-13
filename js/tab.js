@@ -65,9 +65,13 @@ $(function () {
             case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
             case "#createEmail": pathn = "createEmail.html"; i=null;break;   //新建邮件
             case "#emailDetail": pathn = "emailDetail.html"; i=null;break;  //邮件详情
-            // 客户支持 -工单管理
+            // 客户支持 - 工单管理
             case "#workOrder": pathn = "workOrder.html"; i=4;break;  
             case "#workOrderDetail": pathn = "workOrderDetail.html";break;  
+            // 客户支持 - 知识库
+            case "#knowledgeBase": pathn = "knowledgeBase.html";break;  
+            case "#knowledgeBaseDetail": pathn = "knowledgeBaseDetail.html";break;  
+            
 
             // 财务管理 - 发票管理
             case "#invoiceControl": pathn = "invoiceControl.html";i=3; break;
