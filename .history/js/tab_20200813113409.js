@@ -50,7 +50,7 @@ $(function () {
             window.location.hash = sId;  
             loadInner(sId);
         },
-    },".email_btn , .check_email, .config_detail_btn , .change_price , .update_product , .flowDetailHref");
+    },".email_btn , .check_email, .config_detail_btn , .change_price , .flowDetailHref");
     function loadInner(sId) {
         var sId = window.location.hash;
         var pathn, i;

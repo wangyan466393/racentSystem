@@ -715,7 +715,7 @@ td {
 }
 .config_content p > span , .price_content p > span{
     display: inline-block;
-    width: 75px;
+    width: 65px;
     text-align: right;
     margin-right: 10px;
 }
@@ -773,9 +773,6 @@ td {
     background-color: #f6f6f6;
     border: 1px solid #e6e6e6;
     display: table-cell;
-}
-.email_back_btn{
-    text-align: right;
 }
 .description{
     width: 100%;

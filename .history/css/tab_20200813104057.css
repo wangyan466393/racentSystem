@@ -710,12 +710,12 @@ td {
 /* 可配置项 */
 .config_content , .price_content {
     margin-top: 20px;
-    width: 97%;
+    width: 95%;
     box-sizing: border-box;
 }
 .config_content p > span , .price_content p > span{
     display: inline-block;
-    width: 75px;
+    width: 65px;
     text-align: right;
     margin-right: 10px;
 }
@@ -774,9 +774,6 @@ td {
     border: 1px solid #e6e6e6;
     display: table-cell;
 }
-.email_back_btn{
-    text-align: right;
-}
 .description{
     width: 100%;
     min-height: 150px;
@@ -785,17 +782,6 @@ td {
 .priceData_box{
     width: 100%;
 }
-.price_tabledata{
-    margin-bottom: 10px;
-}
 .price_tabledata thead th{
     border: #e6e6e6 1px solid ;
-    width: 150px;
-    white-space: nowrap;
-}
-.price_tabledata button
-{
-    border: 1px solid #e6e6e6;
-    padding: 3px 24px;
-    border-radius: 3px;
 }

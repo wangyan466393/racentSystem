@@ -50,7 +50,7 @@ $(function () {
             window.location.hash = sId;  
             loadInner(sId);
         },
-    },".email_btn , .check_email, .config_detail_btn , .change_price , .update_product , .flowDetailHref");
+    },".email_btn , .check_email, .config_detail_btn , .change_price , .flowDetailHref");
     function loadInner(sId) {
         var sId = window.location.hash;
         var pathn, i;
@@ -83,12 +83,10 @@ $(function () {
            //商品管理
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;   //商品列表
            case "#priceSetting": pathn = "priceSetting.html";i=5; break;    //价格设置
-           case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //修改商品
            
            //可配置项
-           case "#configManager": pathn = "productConfigManager.html";i=6; break;  //配置列表
-           case "#configurableDetail": pathn = "configurableDetail.html";i=6; break; 
-
+           case "#configManager": pathn = "productConfigManager.html";i=6; break;
+           case "#configurableDetail": pathn = "configurableDetail.html";i=6; break;
            default: pathn = "orderManagement.html";  break;
         }
         $(".right_content").load(pathn); //加载相对应的内容
