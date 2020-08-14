@@ -45,8 +45,9 @@
                 </li>
                 <li>
                     <p> <span>正文</span></p>
-                    <textarea class="e_content description"></textarea>
-                    
+                    <div id="editor" style="width: 100%;">
+                        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+                    </div>
                 </li>
 
             </ul>
@@ -54,7 +55,37 @@
     </div>
 </div>
 <div class="email_back_btn">
-    <button type="button">修改</button>
+    <button type="button">保存</button>
 </div>
 
-<script src="js/jquery-1.11.3.js"></script>
+<script src="js/wangEditor.min.js"></script>
+
+<script>
+
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('editor') )
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'fontSize',  // 字号
+        'fontName',  // 字体
+        'italic',  // 斜体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色
+        'backColor',  // 背景颜色
+        'link',  // 插入链接
+        'list',  // 列表
+        'justify',  // 对齐方式
+        'quote',  // 引用
+        'emoticon',  // 表情
+        'image',  // 插入图片
+        'table',  // 表格
+        'video',  // 插入视频
+        'code',  // 插入代码
+        'undo',  // 撤销
+        'redo'  // 重复
+    ]
+    editor.create()
+</script>

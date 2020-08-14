@@ -1,0 +1,86 @@
+<div id="content_box">
+        <h2>栏目管理</h2>
+        <div id="content">
+            <div id="order_all" class="order_content">
+                <div class="order_search">
+                    <span>
+                        <input type="text" placeholder="请输入栏目名称">
+                    </span>
+                   
+                    <span>
+                        <button type=" button" id="order_search">搜索</button>
+                    </span>
+                </div>
+                <div class="table_box">
+                    <table id="subscription_dataLists">
+                        <thead>
+                            <tr>
+                                <th>名字</th>
+                                <th>类别</th>
+                                <th>别名</th>
+                                <th>上级类别</th>
+                                <th>状态</th>
+                            
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 分页 -->
+                <div class="page pageFloat" >
+    
+                </div>
+            </div>
+        </div>
+        <button class="import_btn addCollection">添加栏目</button>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+        // 分页
+        $.pageInit({
+            container: '.page', //容器：默认page
+            countPage: 10, //一共有多少页
+            showPageCount: 5, //显示多少个分页按钮
+            nowPage: 1, //当前是第几页
+            count: 50, //数据总数
+            callBack: function (data) {
+                //当前的页码
+                console.log("当前的页码为：" + data)
+            }
+        });
+        var json = [
+            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},  
+            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
+            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
+            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
+            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"}
+        ];
+        //订单管理--所有订单信息
+        getTableData()
+        function getTableData() {
+            var tableInfo = ""
+            for (var i in json) {    //遍历Table的所有Row
+                tableInfo += `<tr>
+                    <td>${json[i].name}</td>
+                    <td>${json[i].category}</td>
+                    <td>${json[i].alias}</td>
+                    <td>${json[i].super_category}</td>
+                    <td>${json[i].status}</td>
+                    
+                    <td>
+                        <a class='flowDetailHref' data-id='knowledgeBaseDetail'><img src='images/alert_file.png'></a>
+                        &nbsp;&nbsp;
+                        <a><img src='images/delete.png'/></a>
+                    </td>
+                </tr>`;
+            }
+            $(".right_content #subscription_dataLists tbody").html(tableInfo)
+        }
+    
+    
+    
+    </script>

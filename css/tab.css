@@ -115,6 +115,7 @@ td {
     border: none;
     border: 1px solid #d9d9d9;
     outline: none;
+    text-indent: 6px;
 }
 
 .order_search button , .email_back_btn button , .import_btn , .export_btn {
@@ -510,6 +511,25 @@ td {
 .messageTitle span{
     margin: 0 10px;
     line-height: 44px;
+}
+/* 客服支持  文章管理*/
+.artcleintro_box{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding:8px 20px 16px;
+}
+.artcleintro_box>.intro li{
+    padding: 0;
+    width: 12%;
+}
+#artcleSta{
+    justify-content:flex-start;
+}
+input[type="radio"]{
+    vertical-align: -2px;
+}
+#artcleSta input{
+    margin-right: 2px;
 }
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{

@@ -61,16 +61,19 @@ $(function () {
             case "#subscriptionManagement": pathn = "subscriptionManagement.html"; break;
             case "#customerListsData": pathn = "customerListsData.html"; break;
             case "#customerData": pathn = "customerData.html"; break;
-            //客户支持
+            //客服支持
             case "#emailManagement": pathn = "emailManagement.html"; i=null;break;    //邮件管理
             case "#createEmail": pathn = "createEmail.html"; i=null;break;   //新建邮件
             case "#emailDetail": pathn = "emailDetail.html"; i=null;break;  //邮件详情
-            // 客户支持 - 工单管理
+            // 客服支持 - 工单管理
             case "#workOrder": pathn = "workOrder.html"; i=4;break;  
             case "#workOrderDetail": pathn = "workOrderDetail.html";break;  
-            // 客户支持 - 知识库
+            // 客服支持 - 知识库
             case "#knowledgeBase": pathn = "knowledgeBase.html";break;  
             case "#knowledgeBaseDetail": pathn = "knowledgeBaseDetail.html";break;  
+            // 客服支持 - 文章管理
+            case "#articleManagement": pathn = "articleManagement.html";break;  
+            case "#articleManagementDetail": pathn = "articleManagementDetail.html";break;  
             
 
             // 财务管理 - 发票管理
@@ -89,9 +92,11 @@ $(function () {
            case "#priceSetting": pathn = "priceSetting.html";i=5; break;    //价格设置
            case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //修改商品
            
-           //可配置项
+           //商品管理 - 可配置项
            case "#configManager": pathn = "productConfigManager.html";i=6; break;  //配置列表
            case "#configurableDetail": pathn = "configurableDetail.html";i=6; break; 
+            // 系统配置 - 栏目管理
+           case "#columnManagement": pathn = "columnManagement.html";i=6; break; 
 
            default: pathn = "orderManagement.html";  break;
         }

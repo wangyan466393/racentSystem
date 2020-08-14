@@ -1,0 +1,154 @@
+<div id="content_box">
+    <h2>文章修改</h2>
+    <div class="config_box">
+        <div class="config_content">
+            <ul>
+                <li>
+                    <p>
+                        <span>文章标题</span><input type="text" class="config_inp">
+                    </p>
+                    <p>
+                        <span>文章别名</span><input type="text" class="config_inp">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>文章作者</span><input type="text" class="config_inp">
+                    </p>
+                    <p>
+                        <span>文章排序</span><input type="text" class="config_inp">
+                    </p>
+                </li>
+                <li>
+
+                    <p>
+                        <span>文档tag表情</span>
+                        <input type="text" class="config_inp">
+                        (以逗号隔开)
+                    </p>
+                    <p>
+                        <span>mate关键字</span><input type="text" class="config_inp">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>meta描述</span><input type="text" class="config_inp">
+                    </p>
+                    <p>
+                        <span>meta标题</span><input type="text" class="config_inp">
+                    </p>
+                </li>
+                <li>
+                    <p> <span>文档摘要</span></p>
+                    <textarea class="e_content description"></textarea>
+
+                </li>
+                <li>
+                    <p> <span>正文</span></p>
+                    <div id="editor" style="width: 100%;">
+                        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+                    </div>
+                </li>
+                <li>
+                    <p> <span>文档栏目</span></p>
+                    <div class="artcleintro_box">
+                        <ul class="intro">
+                            <li>
+                                <input type="radio" checked><label for="">SSL证书</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">intro</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">WHMCS</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">intro</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">锐成资讯</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">域名</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Sectigo</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Digicert</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Comodo</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Geotrust</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Entrust </label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">GlobalSign</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">Virtuozzo</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">虚拟化</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">服务器管理面板</label>
+                            </li>
+                            <li>
+                                <input type="radio"><label for="">域名</label>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                <li id="artcleSta" >
+                    <p> <span>文档状态</span></p>
+                    <span>
+                        <input type="radio" name="" checked>未发布
+                        <input type="radio" name="" >已发布
+                    </span>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="email_back_btn">
+    <button type="button">保存</button>
+</div>
+
+<script src="js/wangEditor.min.js"></script>
+
+<script>
+
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('editor') )
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'fontSize',  // 字号
+        'fontName',  // 字体
+        'italic',  // 斜体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色
+        'backColor',  // 背景颜色
+        'link',  // 插入链接
+        'list',  // 列表
+        'justify',  // 对齐方式
+        'quote',  // 引用
+        'emoticon',  // 表情
+        'image',  // 插入图片
+        'table',  // 表格
+        'video',  // 插入视频
+        'code',  // 插入代码
+        'undo',  // 撤销
+        'redo'  // 重复
+    ]
+    editor.create()
+</script>
