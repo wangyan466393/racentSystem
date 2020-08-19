@@ -91,7 +91,7 @@ $(function () {
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;   //商品列表
            case "#priceSetting": pathn = "priceSetting.html";i=5; break;    //价格设置
            case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //修改商品
-           case "#addProduct": pathn = "addProduct.html";i=5; break;    //添加商品
+           case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //添加商品
            
            //商品管理 - 可配置项
            case "#configManager": pathn = "productConfigManager.html";i=6; break;  //配置列表

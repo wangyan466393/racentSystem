@@ -879,7 +879,3 @@ input[type="radio"]{
 .thumb_box input.form-control{
     width: 300px;
 }
-/* 添加商品 */
-ul.add_product_lists input{
-    width: 200px;
-}

@@ -746,7 +746,7 @@ input[type="radio"]{
 }
 .config_content p > span , .price_content p > span{
     display: inline-block;
-    width: 85px;
+    width: 75px;
     text-align: right;
     margin-right: 10px;
 }
@@ -878,8 +878,4 @@ input[type="radio"]{
 }
 .thumb_box input.form-control{
     width: 300px;
-}
-/* 添加商品 */
-ul.add_product_lists input{
-    width: 200px;
 }
