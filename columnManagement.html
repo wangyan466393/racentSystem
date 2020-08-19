@@ -1,86 +1,254 @@
+<style>
+    /*模态框*/
+    .modal {
+        display: none;
+        /* 默认隐藏 */
+        position: fixed;
+        /* 根据浏览器定位 */
+        z-index: 1;
+        /* 放在顶部 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* 全宽 */
+        height: 100%;
+        /* 全高 */
+        overflow: auto;
+        /* 允许滚动 */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* 背景色 */
+    }
+
+    /*模态框内容*/
+    .modal-content {
+        display: flex;
+        /*采用flexbox布局*/
+        flex-direction: column;
+        /*垂直排列*/
+        position: relative;
+        background-color: #fefefe;
+        margin: 15% auto;
+        /*距顶部15% 水平居中*/
+        
+        border: 1px solid #888;
+        width: 567px;
+        animation: topDown 0.4s;
+        /*自定义动画，从模态框内容上到下出现*/
+    }
+
+    @keyframes topDown {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    /*模态框头部*/
+   .modal-header h2{
+        font-size: 18px;
+        color: #ec6c32;
+        margin-top: 32px;
+        line-height: 22px;
+        font-weight:400;
+   }
+   .modal-body p{
+        margin-top: 20px;
+    }
+    /*关闭X 样式*/
+    .close {
+        color: #fff;
+        float: right;
+        font-size: 34px;
+        font-weight: bold;
+        width: 32px;
+	    height: 32px;
+	    background-color: #ec6c32;
+    }
+
+    .close:hover {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* 模态框 主体 */
+    .modal-body{
+        margin: 20px auto;
+    }
+    
+    .modal-body input{
+        width: 240px;
+	    height: 34px;
+	    border: solid 2px #cccccc;
+        text-indent: 6px;
+        margin:0 16px;
+    }
+    /* 模态框 底部 */
+    .modal-footer{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+            /*采用flexbox布局*/
+            flex-direction: row;
+            /*水平布局*/
+            align-items: center;
+           justify-content: space-between;
+    }
+</style>
 <div id="content_box">
-        <h2>栏目管理</h2>
-        <div id="content">
-            <div id="order_all" class="order_content">
-                <div class="order_search">
-                    <span>
-                        <input type="text" placeholder="请输入栏目名称">
-                    </span>
-                   
-                    <span>
-                        <button type=" button" id="order_search">搜索</button>
-                    </span>
-                </div>
-                <div class="table_box">
-                    <table id="subscription_dataLists">
-                        <thead>
-                            <tr>
-                                <th>名字</th>
-                                <th>类别</th>
-                                <th>别名</th>
-                                <th>上级类别</th>
-                                <th>状态</th>
-                            
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-    
-                        </tbody>
-                    </table>
-                </div>
-                <!-- 分页 -->
-                <div class="page pageFloat" >
-    
-                </div>
+    <h2>栏目管理</h2>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <input type="text" placeholder="请输入栏目名称">
+                </span>
+
+                <span>
+                    <button type=" button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="subscription_dataLists">
+                    <thead>
+                        <tr>
+                            <th>名字</th>
+                            <th>类别</th>
+                            <th>别名</th>
+                            <th>上级类别</th>
+                            <th>状态</th>
+
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page pageFloat">
+
             </div>
         </div>
-        <button class="import_btn addCollection">添加栏目</button>
     </div>
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/page.js"></script>
-    <script>
-        // 分页
-        $.pageInit({
-            container: '.page', //容器：默认page
-            countPage: 10, //一共有多少页
-            showPageCount: 5, //显示多少个分页按钮
-            nowPage: 1, //当前是第几页
-            count: 50, //数据总数
-            callBack: function (data) {
-                //当前的页码
-                console.log("当前的页码为：" + data)
-            }
-        });
-        var json = [
-            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},  
-            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
-            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
-            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"},
-            { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用","super_category":"顶级栏目"}
-        ];
-        //订单管理--所有订单信息
-        getTableData()
-        function getTableData() {
-            var tableInfo = ""
-            for (var i in json) {    //遍历Table的所有Row
-                tableInfo += `<tr>
+    <button class="import_btn addCollection">添加栏目</button>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 10, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 50, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+    var json = [
+        { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用", "super_category": "顶级栏目" },
+        { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用", "super_category": "顶级栏目" },
+        { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用", "super_category": "顶级栏目" },
+        { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用", "super_category": "顶级栏目" },
+        { "name": "SSL证书", "category": "post", "alias": "ssl", "status": "可用", "super_category": "顶级栏目" }
+    ];
+    //订单管理--所有订单信息
+    getTableData()
+    function getTableData() {
+        var tableInfo = ""
+        for (var i in json) {    //遍历Table的所有Row
+            tableInfo += `<tr>
                     <td>${json[i].name}</td>
                     <td>${json[i].category}</td>
                     <td>${json[i].alias}</td>
                     <td>${json[i].super_category}</td>
                     <td>${json[i].status}</td>
-                    
                     <td>
-                        <a class='flowDetailHref' data-id='knowledgeBaseDetail'><img src='images/alert_file.png'></a>
+                        <a id='triggerBtn'><img src='images/alert_file.png'></a>
                         &nbsp;&nbsp;
                         <a><img src='images/delete.png'/></a>
+                        <!-- 模态框 -->
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    
+                                    <span id="closeBtn" class="close">×</span>
+                                    <h2>添加栏目</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        <input type='text' placeholder='栏目名称：'/>
+                                        <input type='text' placeholder='栏目别名：'/>
+                                    </p>
+                                    <p>
+                                        <input type='text' placeholder='栏目类别：'/>
+                                        <input type='text' placeholder='上级栏目：'/>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <span>
+                                        <input type='radio' checked> 可用
+                                        <input type='radio' > 禁用
+                                    </span>
+                                    
+                                    <button class="import_btn addCollection">添加栏目</button>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>`;
-            }
-            $(".right_content #subscription_dataLists tbody").html(tableInfo)
         }
-    
-    
-    
-    </script>
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+
+
+    (function () {
+            /*建立模态框对象*/
+            var modalBox = {};
+            /*获取模态框*/
+            modalBox.modal = document.getElementById("myModal");
+            /*获得trigger按钮*/
+            modalBox.triggerBtn = document.getElementById("triggerBtn");
+            /*获得关闭按钮*/
+            modalBox.closeBtn = document.getElementById("closeBtn");
+            /*模态框显示*/
+            modalBox.show = function () {
+                console.log(this.modal);
+                this.modal.style.display = "block";
+            }
+            /*模态框关闭*/
+            modalBox.close = function () {
+                this.modal.style.display = "none";
+            }
+            /*当用户点击模态框内容之外的区域，模态框也会关闭*/
+            modalBox.outsideClick = function () {
+                var modal = this.modal;
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+            /*模态框初始化*/
+            modalBox.init = function () {
+                var that = this;
+                this.triggerBtn.onclick = function () {
+                    that.show();
+                }
+                this.closeBtn.onclick = function () {
+                    that.close();
+                }
+                this.outsideClick();
+            }
+            modalBox.init();
+
+        })()
+</script>

@@ -1,0 +1,91 @@
+<div id="content_box">
+    <h2>员工列表</h2>
+    <div id="content">
+        <div id="order_all" class="order_content">
+            <div class="order_search">
+                <span>
+                    <select name="" id="">
+                        <option value="">选择部门</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="text" placeholder="请输入员工名称">
+                </span>
+               
+                <span>
+                    <button type="button" id="order_search">搜索</button>
+                </span>
+            </div>
+            <div class="table_box">
+                <table id="subscription_dataLists">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>电子邮箱</th>
+                            <th>电话号码</th>
+                            <th>用户名</th>
+                            <th>管理组</th>
+                            <th>分配部门</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- 分页 -->
+            <div class="page pageFloat" >
+
+            </div>
+        </div>
+    </div>
+    <button class="import_btn addCollection">添加员工</button>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/page.js"></script>
+<script>
+    // 分页
+    $.pageInit({
+        container: '.page', //容器：默认page
+        countPage: 10, //一共有多少页
+        showPageCount: 5, //显示多少个分页按钮
+        nowPage: 1, //当前是第几页
+        count: 50, //数据总数
+        callBack: function (data) {
+            //当前的页码
+            console.log("当前的页码为：" + data)
+        }
+    });
+    var json = [
+        { "name": "王伟", "email": "wangwei@136.com", "phone": "15263746356", "username": "molly","management_group":"成都分公司","dis_department":"开发部"},  
+        { "name": "王伟", "email": "wangwei@136.com", "phone": "15263746356", "username": "molly","management_group":"成都分公司","dis_department":"开发部"},
+        { "name": "王伟", "email": "wangwei@136.com", "phone": "15263746356", "username": "molly","management_group":"成都分公司","dis_department":"开发部"},
+        { "name": "王伟", "email": "wangwei@136.com", "phone": "15263746356", "username": "molly","management_group":"成都分公司","dis_department":"开发部"},
+        { "name": "王伟", "email": "wangwei@136.com", "phone": "15263746356", "username": "molly","management_group":"成都分公司","dis_department":"开发部"}
+    ];
+    //订单管理--所有订单信息
+    getTableData()
+    function getTableData() {
+        var tableInfo = ""
+        for (var i in json) {    //遍历Table的所有Row
+            tableInfo += `<tr>
+                <td>${json[i].name}</td>
+                <td>${json[i].email}</td>
+                <td>${json[i].phone}</td>
+                <td>${json[i].username}</td>
+                <td>${json[i].management_group}</td>
+                <td>${json[i].dis_department}</td>
+                <td>
+                    <a class='flowDetailHref' data-id='staffManagementDetail'><img src='images/alert_file.png'></a>
+                    &nbsp;&nbsp;
+                    <a><img src='images/delete.png'/></a>
+                </td>
+            </tr>`;
+        }
+        $(".right_content #subscription_dataLists tbody").html(tableInfo)
+    }
+
+
+
+</script>
