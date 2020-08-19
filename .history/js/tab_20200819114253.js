@@ -91,16 +91,13 @@ $(function () {
            case "#commodityManagement": pathn = "commodityManagement.html";i=5; break;   //商品列表
            case "#priceSetting": pathn = "priceSetting.html";i=5; break;    //价格设置
            case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //修改商品
-           case "#addProduct": pathn = "addProduct.html";i=5; break;    //添加商品
+           case "#updateProduct": pathn = "updateProduct.html";i=5; break;    //添加商品
            
            //商品管理 - 可配置项
            case "#configManager": pathn = "productConfigManager.html";i=6; break;  //配置列表
            case "#configurableDetail": pathn = "configurableDetail.html";i=6; break; 
             // 系统配置 - 栏目管理
-           case "#columnManagement": pathn = "columnManagement.html";break; 
-           //  系统配置 - 员工管理
-           case "#staffManagement": pathn = "staffManagement.html";i=8; break; 
-           case "#staffManagementDetail": pathn = "staffManagementDetail.html";break; 
+           case "#columnManagement": pathn = "columnManagement.html";i=6; break; 
 
            default: pathn = "orderManagement.html";  break;
         }

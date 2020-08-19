@@ -202,8 +202,7 @@ td {
     color: #666;
     cursor: default;
     border: 1px solid #e6e6e6;
-    background-color: #f6f6f6;
-    text-indent: 6px;
+    background-color: #fff;
 }
 .order_project_table{
     margin-top: 10px;
@@ -503,12 +502,6 @@ td {
 	border-radius: 5px;
 	border: solid 1px #d9d9d9;
 }
-/* 财务管理 - 流水 */
-.flowPos a{
-    position: absolute;
-    right: 42px;
-    top: 8px;
-}
 /* 客服支持 - 工单 */
 .messageTitle{
     background-color: #e5f0ff;
@@ -753,7 +746,7 @@ input[type="radio"]{
 }
 .config_content p > span , .price_content p > span{
     display: inline-block;
-    width: 85px;
+    width: 75px;
     text-align: right;
     margin-right: 10px;
 }
@@ -885,8 +878,4 @@ input[type="radio"]{
 }
 .thumb_box input.form-control{
     width: 300px;
-}
-/* 添加商品 */
-ul.add_product_lists input{
-    width: 200px;
 }

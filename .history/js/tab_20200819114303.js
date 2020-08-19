@@ -97,10 +97,7 @@ $(function () {
            case "#configManager": pathn = "productConfigManager.html";i=6; break;  //配置列表
            case "#configurableDetail": pathn = "configurableDetail.html";i=6; break; 
             // 系统配置 - 栏目管理
-           case "#columnManagement": pathn = "columnManagement.html";break; 
-           //  系统配置 - 员工管理
-           case "#staffManagement": pathn = "staffManagement.html";i=8; break; 
-           case "#staffManagementDetail": pathn = "staffManagementDetail.html";break; 
+           case "#columnManagement": pathn = "columnManagement.html";i=6; break; 
 
            default: pathn = "orderManagement.html";  break;
         }
