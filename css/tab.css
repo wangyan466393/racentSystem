@@ -538,6 +538,26 @@ input[type="radio"]{
 #artcleSta input{
     margin-right: 2px;
 }
+/* 系统配置 - 员工管理 */
+.staffCheck input{
+    width: 16px;
+	height: 16px;
+	background-color: #ffffff;
+    border: solid 1px #d9d9d9;
+    vertical-align: -3px;
+}
+.jurisdiction .intro li {
+    width: 33%;
+}
+.intro_box2{
+    height: 80px;
+    width: 100%;
+	background-color: #f6f6f6;
+	border: solid 1px #d9d9d9;
+}
+.intro_box2 ul{
+    padding: 10px;
+}
 /* *******************客户资料-交易记录**************************************** */
 .finance_btn button{
     margin-left: 12px;

@@ -1,0 +1,64 @@
+<div id="content_box">
+        <h2>员工组列表</h2>
+        <div id="content">
+            <div id="order_all" class="order_content">
+                <div class="order_search">
+                    <span>
+                        <select name="" id="">
+                            <option value="">选择分组</option>
+                        </select>
+                    </span>
+                   
+                    <span>
+                        <button type="button" id="order_search">搜索</button>
+                    </span>
+                </div>
+                <div class="table_box">
+                    <table id="subscription_dataLists">
+                        <thead>
+                            <tr>
+                                <th>用户组</th>
+                                <th>指派管理员</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button class="import_btn addCollection">添加员工</button>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+        var json = [
+            { "admin": "王伟", "userGroup": "开发部"},  
+            { "admin": "王伟", "userGroup": "开发部"},
+            { "admin": "王伟", "userGroup": "开发部"},
+            { "admin": "王伟", "userGroup": "开发部"},
+            { "admin": "王伟", "userGroup": "开发部"}
+        ];
+        //订单管理--所有订单信息
+        getTableData()
+        function getTableData() {
+            var tableInfo = ""
+            for (var i in json) {    //遍历Table的所有Row
+                tableInfo += `<tr>
+                    <td>${json[i].userGroup}</td>
+                    <td>${json[i].admin}</td>
+                    <td>
+                        <a class='flowDetailHref' data-id='staffGroupManagementDetail'><img src='images/alert_file.png'></a>
+                        &nbsp;&nbsp;
+                        <a><img src='images/delete.png'/></a>
+                    </td>
+                </tr>`;
+            }
+            $(".right_content #subscription_dataLists tbody").html(tableInfo)
+        }
+    
+    
+    
+    </script>
