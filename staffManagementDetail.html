@@ -33,10 +33,21 @@
                         </td>
                         
                     </tr>
+                    <tr> 
+                        <td>描述</td>
+                        <td colspan="6" >
+                            <ul class="config_content">
+                                <li>
+                                    <textarea class="e_content description"></textarea>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
                     <tr>
-                        <td>文档摘要</td>
-                        <td>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <td>禁用</td>
+                        <td colspan="6" class="staffCheck" align='left'>
+                            <input type="checkbox" name="" id="">
+                            勾选此复选框以禁用此帐户，并防止登录(你不能关闭自己的帐户或只有admin)
                         </td>
                     </tr>
                 </table>
@@ -45,5 +56,8 @@
     </div>
 </div>
 <button class="invoiceSub">
-    修改
+    确认修改
+</button>
+<button class="invoiceSub" style="background:#999;">
+    取消修改
 </button>

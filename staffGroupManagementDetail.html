@@ -1,0 +1,93 @@
+<div id="content_box">
+    <h2>分组信息修改</h2>
+    <div class="config_box">
+        <div class="config_content">
+            <ul>
+                <li>
+                    <p>
+                        <span>组名称</span><input type="text" class="config_inp" value="成都分公司">
+                    </p>
+
+                </li>
+                <li>
+                    <p> <span>权限</span></p>
+                    <div class="intro_box jurisdiction">
+                        <ul class="intro">
+                            <li>
+                                <input type="checkbox"><label for="">Plesk Web Pro VPS版</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">WHMCS Plus</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">WHMCS Plus</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p><span style="line-height: 35px;">访问控制</span></p>
+                    <div class="input_group_box">
+                        <div class="input_group" style="width:100%;">
+                            <span class="input-group-addon" style="background:rgba(0,0,0,0);">
+                                <input type="radio" name='aa' checked>未发布
+                                <input type="radio" name='aa'>已发布
+                            </span>
+                            <input type="text" class="form-control" style="width:100%;">
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <p> <span>邮件通知</span></p>
+                    <div class="intro_box2">
+                        <ul>
+                            <li>
+                                <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<button class="invoiceSub">
+    确认修改
+</button>
+<button class="invoiceSub" style="background:#999;">
+    取消修改
+</button>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    getProductListsData();
+    function getProductListsData() {
+        var tableInfo = ""
+        for (var i = 0; i < 15; i++) {    //遍历Table的所有Row
+            tableInfo += `
+                <li>
+                    <input type="checkbox"><label for="">PositiveSSL DV多域名SSL证书</label>
+                </li>
+                `
+        }
+        $(".right_content .intro").append(tableInfo)
+    }
+</script>

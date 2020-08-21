@@ -101,8 +101,12 @@ $(function () {
            //  系统配置 - 员工管理
            case "#staffManagement": pathn = "staffManagement.html";i=8; break; 
            case "#staffManagementDetail": pathn = "staffManagementDetail.html";break; 
-
-           default: pathn = "orderManagement.html";  break;
+           //  系统配置 - 员工组管理    
+           case "#staffGroupManagement": pathn = "staffGroupManagement.html";break; 
+           case "#staffGroupManagementDetail": pathn = "staffGroupManagementDetail.html";break; 
+           
+           //  首页  
+           default: pathn = "home.html";  break;
         }
         $(".right_content").load(pathn); //加载相对应的内容
         $(".leftMenus li").eq(i).addClass("active").siblings().removeClass("active"); //当前列表高亮
