@@ -15,18 +15,22 @@
                     <input type="text" placeholder="请输入订单号" id="order_number">
                 </span>
                 <span>
-                    
+                    下单日期
                     <!-- <input type="date" value="付款日期"">~
                     <input type="date" value="付款日期""> -->
                     <div class="well">
                         <form class="form-horizontal">
+                            <fieldset>
                                 <div class="control-group">
                                     <div class="controls">
                                         <div class="input-prepend input-group">
-                                            下单日期 <input type="text" style="width: 250px" name="reservation" id="reservation" placeholder="YYYY-MM-DD - YYYY-MM-DD" value="" />
+            
+                                            <input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="YYYY-MM-DD YYYY-MM-DD" />
+            
                                         </div>
                                     </div>
                                 </div>
+                            </fieldset>
                         </form>
                     </div>
             </span>
@@ -78,14 +82,9 @@
 
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/page.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/daterangepiker.js"></script>
+
 <script>
-   $(document).ready(function() {
-                                $('#reservation').daterangepicker(null, function(start, end, label) {
-            						console.log(start.toISOString(), end.toISOString(), label);
-                                });
-                            });
+  
     var json = [
         { "name": "ljp11", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },   //json[0]
         { "name": "ljp1", "order_num": "20200803xcnjj63cm", "product_name": "Sectigo EV代码签名", "order_date": new Date(), "payment_method": "零钱支付", "order_type": "新", "order_status": "草稿", "order_price": "1229.60" },

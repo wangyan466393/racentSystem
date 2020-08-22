@@ -492,8 +492,6 @@
 <!-- 软键盘插件 -->
 <script src="js/index.js"></script>
 <script src="js/page.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/daterangepiker.js"></script>
 <script>
     //软键盘
     // const keyboard = new aKeyboard.keyboard({
@@ -513,11 +511,7 @@
     //     $("#input").removeAttr("disabled").focus();
     //     $("#main_keyboard").css("display", "block")
     // })
-    $(document).ready(function() {
-                                $('.reservation').daterangepicker(null, function(start, end, label) {
-            						console.log(start.toISOString(), end.toISOString(), label);
-                                });
-                            });
+
     // 分页
     $.pageInit({
         container: '.page', //容器：默认page

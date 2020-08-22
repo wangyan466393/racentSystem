@@ -314,7 +314,7 @@
                                     <div class="control-group">
                                         <div class="controls">
                                             <div class="input-prepend input-group">
-                                                证书有效期 <input type="text" style="width: 250px" name="reservation" class="reservation" placeholder="YYYY-MM-DD - YYYY-MM-DD" value="" />
+                                                证书有效期 <input type="text" style="width: 250px" name="reservation" id="reservation" placeholder="YYYY-MM-DD - YYYY-MM-DD" value="" />
                                             </div>
                                         </div>
                                     </div>
@@ -492,8 +492,6 @@
 <!-- 软键盘插件 -->
 <script src="js/index.js"></script>
 <script src="js/page.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/daterangepiker.js"></script>
 <script>
     //软键盘
     // const keyboard = new aKeyboard.keyboard({
@@ -513,11 +511,7 @@
     //     $("#input").removeAttr("disabled").focus();
     //     $("#main_keyboard").css("display", "block")
     // })
-    $(document).ready(function() {
-                                $('.reservation').daterangepicker(null, function(start, end, label) {
-            						console.log(start.toISOString(), end.toISOString(), label);
-                                });
-                            });
+
     // 分页
     $.pageInit({
         container: '.page', //容器：默认page
